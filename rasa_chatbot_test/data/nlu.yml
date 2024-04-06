@@ -13,8 +13,8 @@ nlu:
     - hey there
     - let's go
     - hey dude
-    - goodmorning
-    - goodevening
+    - good morning
+    - good evening
     - good afternoon
 
 - intent: goodbye
@@ -49,43 +49,24 @@ nlu:
     - no way
     - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
 
-- intent: mood_unhappy
+- intent: ask_renew_scholarship
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - when can I renew my scholarship?
+    - how can I renew my scholarship?
+    - how can I renew my pag-ibig scholarship?
+    - any info with regards to the scholarship?
+    - who to approach with regards to the scholarship?
 
-- intent: bot_challenge
+- intent: ask_scholarship_process
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - what's the process?
+    - what's the process for renewal of the scholarship?
+    - when can I process the renewal of the scholarship?
+
+- intent: scholarship_type
+  examples: |
+    - [pag-ibig](scholarship)
+    - [metrobank](scholarship)
+    - [government](scholarship)
+    
