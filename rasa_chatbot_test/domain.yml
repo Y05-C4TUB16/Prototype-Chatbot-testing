@@ -17,21 +17,25 @@ slots:
   scholarship:
     type: text
     mappings:
-      -type: from_entity
-      entity: scholarship
+      - type: from_entity
+        entity: scholarship
+
 
 actions:
   - action_ask_scholarship
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! I am the HEDCen school chatbot! You can ask me anything school related.\n Other than that, I cannot answer any questions from the user. Thank You! "
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "You're Welcome, Goodbye"
 
   utter_scholarship_process:
-    - text: "Just tell to the school personnel that you will renew your existing scholarship, or you can contact us at 0987654321."
+    - text: "Please inform the school personnel that you intend to renew your current scholarship, or alternatively, you can reach us at 0987654321 for further assistance."
+
+  utter_ask_scholarship:
+    - text: "Can you please specify your scholarship type?"
 
 session_config:
   session_expiration_time: 60

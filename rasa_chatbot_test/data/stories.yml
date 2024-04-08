@@ -6,12 +6,23 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+
+- story: ask for a specific scholarship renewal
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_renew_scholarship
+    - action: utter_ask_scholarship
+    - intent: scholarship_type
+    - action: action_ask_scholarship
+    - intent: goodbye
+    - action: utter_goodbye
 
 - story: ask for a scholarship renewal
   steps:
     - intent: greet
     - action: utter_greet
     - intent: ask_renew_scholarship
-    - action: action_ask_scholarship
+    - action: utter_ask_scholarship
+    - intent: goodbye
+    - action: utter_goodbye

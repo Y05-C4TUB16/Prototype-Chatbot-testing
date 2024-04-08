@@ -20,7 +20,7 @@ nlu:
 - intent: goodbye
   examples: |
     - cu
-    - good by
+    - good bye
     - cee you later
     - good night
     - bye
@@ -29,6 +29,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - thank you goodbye
 
 - intent: affirm
   examples: |
@@ -52,17 +53,17 @@ nlu:
 
 - intent: ask_renew_scholarship
   examples: |
-    - when can I renew my scholarship?
-    - how can I renew my scholarship?
-    - how can I renew my pag-ibig scholarship?
-    - any info with regards to the scholarship?
-    - who to approach with regards to the scholarship?
+    - when can I renew my [scholarship](scholarship)?
+    - how can I renew my [scholarship](scholarship)?
+    - how can I renew my [pag-ibig scholarship](scholarship)?
+    - any info with regards to the [scholarship](scholarship)?
+    - who to approach with regards to the [scholarship](scholarship)?
 
 - intent: ask_scholarship_process
   examples: |
-    - what's the process?
-    - what's the process for renewal of the scholarship?
-    - when can I process the renewal of the scholarship?
+    - what's the process for the [scholarship](scholarship) renewal?
+    - what's the process for renewal of the [scholarship](scholarship)?
+    - when can I process the renewal of the [scholarship](scholarship)?
 
 - intent: scholarship_type
   examples: |

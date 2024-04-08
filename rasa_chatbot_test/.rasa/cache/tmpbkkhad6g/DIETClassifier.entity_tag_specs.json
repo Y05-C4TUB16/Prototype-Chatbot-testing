@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-scholarship",
+      "2": "I-scholarship",
+      "3": "L-scholarship",
+      "4": "U-scholarship",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-scholarship": 1,
+      "I-scholarship": 2,
+      "L-scholarship": 3,
+      "U-scholarship": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]
