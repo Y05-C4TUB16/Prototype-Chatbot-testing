@@ -71,3 +71,62 @@ nlu:
     - [metrobank](scholarship)
     - [government](scholarship)
     
+- intent: ask_strand
+  examples: |
+    - What are the available strands in your SHS [program](strand)?
+    - What strands are offered in your Senior High School [program](strand)?
+    - Which courses are offered in your Senior High School [program](strand)?
+    - Can you list the available programs in your Senior High School [curriculum](strand)?
+    - What academic options are there in your Senior High School [program](strand)?
+    - What are the available [strand]?
+    - Which [track] (strand) are offered in Senior High School
+
+- synonym: strand
+  examples: |
+    - program
+    - track
+    - curriculum
+    - course
+    - strands
+
+- intent: inquire_strand1_lsr
+  examples: |
+    - May I inquire about the first option?
+    - I would like to know more about the first option
+    - May I inquire about Life Science and Research?
+    - I would like to know more about Life Science and Research
+
+- intent: inquire_strand2_ttd
+  examples: |
+    - May I inquire about the second option?
+    - I would like to know more about the second option
+    - May I inquire about Teacher Training and Development?
+    - I would like to know more about Teacher Training and Development
+
+- intent: inquire_strand3_sed
+  examples: |
+    - May I inquire about the third option?
+    - I would like to know more about the third option
+    - May I inquire about Small Enterprise Development?
+    - I would like to know more about Small Enterprise Development
+
+- intent: inquire_strand4_mac
+  examples: |
+    - May I inquire about the fourth option?
+    - I would like to know more about the fourth option
+    - May I inquire about Media Arts Communication?
+    - I would like to know more about Media Arts Communication
+
+- intent: inquire_strand5_fm
+  examples: |
+    - May I inquire about the fifth option?
+    - I would like to know more about the fifth option
+    - May I inquire about Football Management?
+    - I would like to know more about Football Management
+
+- intent: inquire_strand6_cw
+  examples: |
+    - May I inquire about the sixth option?
+    - I would like to know more about the sixth option
+    - May I inquire about Contemporary Writing?
+    - I would like to know more about Contemporary Writing

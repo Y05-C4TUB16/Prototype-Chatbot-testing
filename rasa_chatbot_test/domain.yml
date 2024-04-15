@@ -8,10 +8,18 @@ intents:
   - ask_renew_scholarship
   - ask_scholarship_process
   - scholarship_type
+  - ask_strand
+  - inquire_strand1_lsr
+  - inquire_strand2_ttd
+  - inquire_strand3_sed
+  - inquire_strand4_mac
+  - inquire_strand5_fm
+  - inquire_strand6_cw
 
 
 entities:
   - scholarship
+  - strand
 
 slots:
   scholarship:
@@ -21,8 +29,12 @@ slots:
         entity: scholarship
 
 
+
+
+
 actions:
   - action_ask_scholarship
+  - action_ask_strand
 
 responses:
   utter_greet:
@@ -36,6 +48,41 @@ responses:
 
   utter_ask_scholarship:
     - text: "Can you please specify your scholarship type?"
+
+  utter_available_strand:
+    - text: "Our SHS Program has six strands that students can choose from. The modules offered under these strands are open not only to HEDCen students but also
+     to adults and other individuals as well. These may be taken as independent classes and will merit course certificate. 1. Life Science and Research, 2. Teacher Training and Development,
+     3. Small Enterprise Development, 4. Media Arts Communication, 5. Football Management, 6. Contemporary Writing"
+
+  utter_information_strand1:
+    - text: "Sure thing! Life Science and Research aims to empower students to produce knowledge through immersive research in their chosen field: Limnology (lakes and rivers),
+     Oceanography (seas and coasts), or Terestrial Ecology (land biomes). They are expected to publish and present their findings in journals and conventions as a culminating achievement 
+     in Grade 12. Graduates of this program are on track to become capable researchers, passionate communicators, and active conservationists of the earth."
+
+  utter_information_strand2:
+    - text: "Teacher Training and Development aims to develop and equip our students with the professional, social, and academic insight and skill a teacher trainee needs to participate 
+    in the operation and setup of a progressive school. They will also be capable of both the teaching and non-teaching activities of the profession. Students who finish this track are 
+    prepared for positions targeted in areas of school support, teacher assistant, and shadow teacher positions."
+
+  utter_information_strand3:
+    - text: "Small Enterprise Development is for students who want to learn the ropes in starting their own small business - even before they begin college. This track provides students 
+    with business basics and develops the right work ethic to enable them to grow their small enterprise. Students begin thinking like entrepreneurs and are provided with the academic 
+    skills and knowledge for competent business management."
+
+  utter_information_strand4:
+    - text: "Media Arts Communication is a strand that addresses the fundamentals of mass communication and application of mass media. It provides an in-depth understanding of its theories
+     and ethical practice. The track will enable students to practice good communication skills, and strategies to be applied directly in their chosen field."
+
+  utter_information_strand5:
+    - text: "Football Management students who finish this strand are given the capacity to be competent coaches. This track will allow its students to 
+    undergo a specialized training within the HEDCen campus that will enable them to competently manage a football program consistent with the HEDCen Core Values."
+
+  utter_information_strand6:
+    - text: "Contemporary Writing strand deals with the nuances and conventions of modern-day writing. Included in the program are subjects that will delve into the creation of written 
+    material using the various genres taken up in Senior High School. In particular, these genres include fiction, non-fiction advertisements and game design. They will be tasked to 
+    come up with publishable and marketable material that will cater to different audiences. Included in the course are production and design subjects to help create industry standard written work."
+
+
 
 session_config:
   session_expiration_time: 60

@@ -26,3 +26,69 @@ stories:
     - action: utter_ask_scholarship
     - intent: goodbye
     - action: utter_goodbye
+
+- story: ask for SHS program strand 1
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_strand
+    - action: utter_available_strand
+    - intent: inquire_strand1_lsr
+    - action: utter_information_strand1
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: ask for SHS program strand 2
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_strand
+    - action: utter_available_strand
+    - intent: inquire_strand2_ttd
+    - action: utter_information_strand2
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: ask for SHS program strand
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_strand
+    - action: utter_available_strand
+    - intent: inquire_strand3_sed
+    - action: utter_information_strand3
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: ask for SHS program strand
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_strand
+    - action: utter_available_strand
+    - intent: inquire_strand4_mac
+    - action: utter_information_strand4
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: ask for SHS program strand
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_strand
+    - action: utter_available_strand
+    - intent: inquire_strand5_fm
+    - action: utter_information_strand5
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: ask for SHS program strand
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_strand
+    - action: utter_available_strand
+    - intent: inquire_strand6_cw
+    - action: utter_information_strand6
+    - intent: goodbye
+    - action: utter_goodbye

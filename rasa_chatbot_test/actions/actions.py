@@ -27,3 +27,29 @@ class ActionAskScholarship(Action):
         dispatcher.utter_message(text=response)
 
         return []
+
+
+class ActionAskStrand(Action):
+
+    def name(self) -> Text:
+        return "action_ask_strand"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # strand = tracker.latest_message['text']
+        # ask_strand = self.ask_strand(strand)
+
+        strand_slot = next(tracker.get_latest_entity_values("strand"), None)
+        strand = tracker.get_slot("strand") or strand_slot
+
+        if strand:
+            response = ("If you wish to know more about our available programs you may visit the school "
+                        "for more a knowledge")
+        else:
+            response = "Sorry, I could not provide any info regarding your question."
+
+        dispatcher.utter_message(text=response)
+
+        return []
