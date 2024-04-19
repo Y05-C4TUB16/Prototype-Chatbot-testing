@@ -4,7 +4,7 @@ Thesis Prototype chatbot for testing and evaluating user interaction and engagem
 
 ## TO KNOW:
 
-* * note: these are done in the terminal, so create a terminal whenever you want to execute this.
+_note: these are done in the terminal, so create a terminal whenever you want to execute this._
 
 - When you want to create a chatbot, type:
 ```
@@ -16,7 +16,7 @@ then click enter when asked which directory.then Y, then N.
 ```
 rasa train
 ```
-* * note: do this whenever you perform changes within the code.
+_note: do this whenever you perform changes within the code._
 
 - When you want to test the chatbot, type:
 ```
