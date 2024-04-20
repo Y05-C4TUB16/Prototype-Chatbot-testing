@@ -34,3 +34,10 @@ rasa run actions
 rasa run
 ```
 
+
+***The only Files you need***
+
+- nlu.yml
+- domain.yml
+- rules.yml
+- action.py

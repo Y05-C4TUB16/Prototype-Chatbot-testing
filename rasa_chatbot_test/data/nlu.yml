@@ -132,7 +132,7 @@ nlu:
     - I would like to know more about Contemporary Writing
 
 
-# YOS PROTOTYPE
+# YOS CODE
 - intent: swear
   examples: |
     - Oh ****
