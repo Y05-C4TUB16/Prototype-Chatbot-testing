@@ -15,6 +15,7 @@ intents:
   - inquire_strand4_mac
   - inquire_strand5_fm
   - inquire_strand6_cw
+  - swear
 
 
 entities:
@@ -35,6 +36,8 @@ slots:
 actions:
   - action_ask_scholarship
   - action_ask_strand
+  - action_handle_swearing
+
 
 responses:
   utter_greet:
@@ -81,8 +84,16 @@ responses:
     - text: "Contemporary Writing strand deals with the nuances and conventions of modern-day writing. Included in the program are subjects that will delve into the creation of written 
     material using the various genres taken up in Senior High School. In particular, these genres include fiction, non-fiction advertisements and game design. They will be tasked to 
     come up with publishable and marketable material that will cater to different audiences. Included in the course are production and design subjects to help create industry standard written work."
+  
+  # YOS CODE
+  utter_warn_profanity:
+    - text: "Pardon me, but the use of offensive language is not permitted here.
+     We kindly request that you communicate respectfully and refrain from using profanity."
 
-
+  utter_end_conversation:
+    - text: "Upon careful consideration, I am ending this conversation due to the use of offensive language. 
+    Please be aware that such language does not align with our standards.
+     Feel free to reach out again if you have any inquiries or concerns, ensuring that all communication remains respectful."
 
 session_config:
   session_expiration_time: 60

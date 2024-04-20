@@ -130,3 +130,17 @@ nlu:
     - I would like to know more about the sixth option
     - May I inquire about Contemporary Writing?
     - I would like to know more about Contemporary Writing
+
+
+# YOS PROTOTYPE
+- intent: swear
+  examples: |
+    - Oh ****
+    - This is so ****
+    - Stop that ****
+    - Why the **** are you not helping me?
+    - You're useless
+    - F**k off
+    - Go to h***
+    - Shut the f*** up, you're not helping me
+    - I hate you

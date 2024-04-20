@@ -53,3 +53,20 @@ class ActionAskStrand(Action):
         dispatcher.utter_message(text=response)
 
         return []
+    
+    
+# YOS CODE
+class ActionHandleSwearing(Action):
+    def name(self) -> Text:
+        return "action_handle_swearing"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        last_intent = tracker.latest_message['intent'].get('name')
+        
+        if last_intent == 'swear':
+            dispatcher.utter_message(template="utter_warn_profanity")
+        
+        return []

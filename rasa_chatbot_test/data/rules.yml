@@ -6,3 +6,9 @@ rules:
   steps:
   - intent: goodbye
   - action: utter_goodbye
+
+- rule: Handle Swearing and End Conversation
+  steps:
+    - intent: swear
+    - action: utter_warn_profanity
+    - action: utter_end_conversation
