@@ -16,6 +16,7 @@ intents:
   - inquire_strand5_fm
   - inquire_strand6_cw
   - swear
+  - inform_program
 
 
 entities:

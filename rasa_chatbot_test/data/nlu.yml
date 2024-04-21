@@ -143,3 +143,19 @@ nlu:
     - Go to h***
     - Shut the f*** up, you're not helping me
     - I hate you
+
+#School program
+
+- intent: inform_program
+  examples: |
+    - What programs does the school offer?
+    - Can you tell me about the programs available?
+    - What are the different programs offered?
+    - Tell me more about Discovery and Play program.
+    - I want to learn about the Senior Highschool program.
+    - What is included in the Advanced Sciences program?
+    - Could you explain the IT Programs?
+    - What does the Sports Excellence program entail?
+    - Tell me about the Inclusive Program.
+    - What are my options for school programs?
+    - Which programs can I choose from?
