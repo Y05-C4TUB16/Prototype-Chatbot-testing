@@ -70,3 +70,23 @@ class ActionHandleSwearing(Action):
             dispatcher.utter_message(template="utter_warn_profanity")
         
         return []
+    
+# User Asks for the Porgrams in the school.
+
+class ActionProvideProgramInformation(Action):
+    def name(self) -> Text:
+        return "action_provide_program_information"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # Programs information to be displayed to the user
+        program_info = ("The school offers a diverse range of programs to cater to different interests and needs:"
+                        "\n1. Discovery and Play\n2. Senior Highschool\n3. Advanced Sciences\n4. IT Programs"
+                        "\n5. Sports Excellence\n6. Inclusive Program\n\nWhich program are you interested in learning more about?")
+
+        # Send the program information to the user
+        dispatcher.utter_message(text=program_info)
+
+        return []

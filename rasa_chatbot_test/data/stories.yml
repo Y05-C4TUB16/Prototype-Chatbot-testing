@@ -92,3 +92,14 @@ stories:
     - action: utter_information_strand6
     - intent: goodbye
     - action: utter_goodbye
+
+# School Program
+
+- story: User asks about the school program
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: inform_program
+    - action: action_provide_program_information
+    - intent: goodbye
+    - action: utter_goodbye

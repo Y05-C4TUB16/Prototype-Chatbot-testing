@@ -11,4 +11,3 @@ rules:
   steps:
     - intent: swear
     - action: utter_warn_profanity
-    - action: utter_end_conversation

@@ -16,7 +16,7 @@ intents:
   - inquire_strand5_fm
   - inquire_strand6_cw
   - swear
-
+  - inform_program
 
 entities:
   - scholarship
@@ -37,6 +37,8 @@ actions:
   - action_ask_scholarship
   - action_ask_strand
   - action_handle_swearing
+  - action_provide_program_information #When user ask for the Program
+
 
 
 responses:
@@ -54,8 +56,8 @@ responses:
 
   utter_available_strand:
     - text: "Our SHS Program has six strands that students can choose from. The modules offered under these strands are open not only to HEDCen students but also
-     to adults and other individuals as well. These may be taken as independent classes and will merit course certificate. 1. Life Science and Research, 2. Teacher Training and Development,
-     3. Small Enterprise Development, 4. Media Arts Communication, 5. Football Management, 6. Contemporary Writing"
+     to adults and other individuals as well. These may be taken as independent classes and will merit course certificate.\n1. Life Science and Research\n2. Teacher Training and Development
+     \n3. Small Enterprise Development\n4. Media Arts Communication\n5. Football Management\n6. Contemporary Writing"
 
   utter_information_strand1:
     - text: "Sure thing! Life Science and Research aims to empower students to produce knowledge through immersive research in their chosen field: Limnology (lakes and rivers),
@@ -84,16 +86,19 @@ responses:
     - text: "Contemporary Writing strand deals with the nuances and conventions of modern-day writing. Included in the program are subjects that will delve into the creation of written 
     material using the various genres taken up in Senior High School. In particular, these genres include fiction, non-fiction advertisements and game design. They will be tasked to 
     come up with publishable and marketable material that will cater to different audiences. Included in the course are production and design subjects to help create industry standard written work."
-  
-  # YOS CODE
+
+
+  # School Programs
+  utter_information_programs:
+    - text: "The school offers a diverse range of programs to cater to different interests and needs:
+    \n1. Discovery and Play\n2. Senior Highschool\n3. Advanced Sciences\n4. IT Programs\n5. Sports Excellence
+    \n6. Inclusive Program\n\nWhich program are you interested in learning more about?"
+
+  # Profanity
   utter_warn_profanity:
     - text: "Pardon me, but the use of offensive language is not permitted here.
      We kindly request that you communicate respectfully and refrain from using profanity."
 
-  utter_end_conversation:
-    - text: "Upon careful consideration, I am ending this conversation due to the use of offensive language. 
-    Please be aware that such language does not align with our standards.
-     Feel free to reach out again if you have any inquiries or concerns, ensuring that all communication remains respectful."
 
 session_config:
   session_expiration_time: 60

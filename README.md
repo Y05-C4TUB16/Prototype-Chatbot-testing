@@ -40,4 +40,6 @@ rasa run
 - nlu.yml
 - domain.yml
 - rules.yml
+- stories.yml
 - action.py
+
