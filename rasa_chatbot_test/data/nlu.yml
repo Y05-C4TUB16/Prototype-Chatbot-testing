@@ -131,7 +131,6 @@ nlu:
     - May I inquire about Contemporary Writing?
     - I would like to know more about Contemporary Writing
 
-
 # YOS CODE
 - intent: swear
   examples: |
@@ -144,3 +143,67 @@ nlu:
     - Go to h***
     - Shut the f*** up, you're not helping me
     - I hate you
+
+- intent: ask_location
+  examples: |
+    - Where's your school located?
+    - What's your address?
+    - What's the school address?
+    - What's the address of your school?
+    - May I know the school address?
+    - May I know the address?
+    - Where can I find the school?
+    - Where is the school located?
+    - Can you tell me the address of the school?
+    - What's the physical location of the school?
+    - Where can I find the school?
+    - Do you have the school's address?
+    - What's the street address of the school?
+    - Could you provide directions to the school?
+    - May I know where the school is situated?
+    - What's the location of the school campus?
+    - Can you give me the school's location details?
+
+- intent: ask_contact_num #if landline is available, add landline
+  examples: |
+    - What's your number?
+    - What's your phone number?
+    - What's the school's contact number?
+    - What's your contact number?
+    - What's the contact number of the school?
+    - May I have your contact number?
+    - May I ask your phone number?
+    - May I know your contact number?
+    - May I know the school's contact number?
+    - May I know the school's phone number?
+
+- intent: ask_email
+  examples: |
+    - What's your email?
+    - What's the school email?
+    - Can I contact you through email?
+    - Can you provide me with your email address?
+    - What is your email?
+    - How can I contact you via email?
+    - May I have your email, please?
+    - What's the best email address to reach you?
+    - Do you have an email I can use to contact you?
+    - Could you share your email address with me?
+    - What email should I use to get in touch with you?
+    - Would you mind giving me your email?
+    - Can you provide me with an email address for communication?
+
+- intent: ask_contact_info
+  examples: |
+    - What's your contact info?
+    - What is your contact information?
+    - How can I get in touch with you?
+    - What are your contact details?
+    - Do you have contact information available?
+    - Can you provide me with your contact info?
+    - Where can I find your contact information?
+    - May I have your contact details, please?
+    - How do I reach out to you?
+    - What's the best way to contact you?
+    - Is there a way to contact you directly?
+    - What contact options do you offer?
