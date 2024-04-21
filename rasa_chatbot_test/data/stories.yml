@@ -103,3 +103,39 @@ stories:
     - action: action_provide_program_information
     - intent: goodbye
     - action: utter_goodbye
+
+- story: ask location
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_location
+    - action: utter_location
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: ask phone number #if landline is available, add landline
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_contact_num
+    - action: utter_phone_num
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: ask email
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_email
+    - action: utter_email
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: ask contact info #email and number
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_contact_info
+    - action: utter_contact_info
+    - intent: goodbye
+    - action: utter_goodbye

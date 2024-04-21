@@ -16,7 +16,7 @@ intents:
   - inquire_strand5_fm
   - inquire_strand6_cw
   - swear
-  - inform_program
+
 
 entities:
   - scholarship
@@ -99,6 +99,23 @@ responses:
     - text: "Pardon me, but the use of offensive language is not permitted here.
      We kindly request that you communicate respectfully and refrain from using profanity."
 
+
+  utter_location:
+    - text: "We are located at: 95 Beverly Hills Ave., Beverly Hills Subd. , Taytay, Philippines, 1920. You're welcome to visit us during school hours!"
+
+  utter_phone_num: #if landline is available, add landline
+    - text: "Our contact number is: 0917 558 2968. Please don't hesitate to get in touch with us using this number for any questions or assistance you may require."
+
+  utter_email:
+    - text: "Here's our email address: info@hedcen.education. Feel free to reach out to us there for any further assistance you may need."
+
+  utter_contact_info:
+    - text: "Certainly! Here's the contact information for our school:
+
+             Email: info@hedcen.education
+             Contact Number: 0917 558 2968
+
+             You can reach out to us via email or phone for any inquiries or assistance you may need!"
 
 session_config:
   session_expiration_time: 60

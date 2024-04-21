@@ -131,7 +131,6 @@ nlu:
     - May I inquire about Contemporary Writing?
     - I would like to know more about Contemporary Writing
 
-
 # YOS CODE
 - intent: swear
   examples: |
@@ -144,12 +143,3 @@ nlu:
     - Go to h***
     - Shut the f*** up, you're not helping me
     - I hate you
-
-# School Program
-
-- intent: inform_program
-  examples: |
-    - I want to know about the school program
-    - What programs does the school offer?
-    - Can you tell me about the programs available?
-    - What are the different programs offered?
