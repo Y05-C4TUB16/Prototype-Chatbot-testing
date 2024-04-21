@@ -71,7 +71,8 @@ class ActionHandleSwearing(Action):
         
         return []
     
-# User Asks for the Porgrams in the school.
+# User Asks for the Programs in the school.
+
 
 class ActionProvideProgramInformation(Action):
     def name(self) -> Text:
@@ -84,9 +85,11 @@ class ActionProvideProgramInformation(Action):
         # Programs information to be displayed to the user
         program_info = ("The school offers a diverse range of programs to cater to different interests and needs:"
                         "\n1. Discovery and Play\n2. Senior Highschool\n3. Advanced Sciences\n4. IT Programs"
-                        "\n5. Sports Excellence\n6. Inclusive Program\n\nWhich program are you interested in learning more about?")
+                        "\n5. Sports Excellence\n6. Inclusive Program\n"
+                        "\nWhich program are you interested in learning more about?")
 
-        # Send the program information to the user
+# Send the program information to the user
         dispatcher.utter_message(text=program_info)
 
         return []
+
