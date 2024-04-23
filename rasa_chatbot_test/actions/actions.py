@@ -55,7 +55,7 @@ class ActionAskStrand(Action):
         return []
     
     
-# YOS CODE
+# Profanity
 class ActionHandleSwearing(Action):
     def name(self) -> Text:
         return "action_handle_swearing"
@@ -72,8 +72,6 @@ class ActionHandleSwearing(Action):
         return []
     
 # User Asks for the Programs in the school.
-
-
 class ActionProvideProgramInformation(Action):
     def name(self) -> Text:
         return "action_provide_program_information"
@@ -86,7 +84,7 @@ class ActionProvideProgramInformation(Action):
         program_info = ("The school offers a diverse range of programs to cater to different interests and needs:"
                         "\n1. Discovery and Play\n2. Senior Highschool\n3. Advanced Sciences\n4. IT Programs"
                         "\n5. Sports Excellence\n6. Inclusive Program\n"
-                        "\nWhich program are you interested in learning more about?")
+                        "\nFor more information please visit our websiste: https://hedcen.education/?")
 
 # Send the program information to the user
         dispatcher.utter_message(text=program_info)

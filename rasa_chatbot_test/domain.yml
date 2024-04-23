@@ -31,9 +31,6 @@ slots:
         entity: scholarship
 
 
-
-
-
 actions:
   - action_ask_scholarship
   - action_ask_strand
@@ -93,7 +90,7 @@ responses:
   utter_information_programs:
     - text: "The school offers a diverse range of programs to cater to different interests and needs:
     \n1. Discovery and Play\n2. Senior Highschool\n3. Advanced Sciences\n4. IT Programs\n5. Sports Excellence
-    \n6. Inclusive Program\n\nWhich program are you interested in learning more about?"
+    \n6. Inclusive Program\n\nFor more information please visit our websiste: https://hedcen.education/?"
 
   # Profanity
   utter_warn_profanity:
