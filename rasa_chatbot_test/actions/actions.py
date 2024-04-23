@@ -82,9 +82,9 @@ class ActionProvideProgramInformation(Action):
 
         # Programs information to be displayed to the user
         program_info = ("The school offers a diverse range of programs to cater to different interests and needs:"
-                        "\n1. Discovery and Play\n2. Senior Highschool\n3. Advanced Sciences\n4. IT Programs"
+                        "\n1. Discovery and Play\n2. Senior High school\n3. Advanced Sciences\n4. IT Programs"
                         "\n5. Sports Excellence\n6. Inclusive Program\n"
-                        "\nFor more information please visit our websiste: https://hedcen.education/?")
+                        "\nFor more information please visit our website: https://hedcen.education/?")
 
 # Send the program information to the user
         dispatcher.utter_message(text=program_info)
