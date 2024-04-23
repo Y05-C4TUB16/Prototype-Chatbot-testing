@@ -17,6 +17,10 @@ intents:
   - inquire_strand6_cw
   - swear
   - inform_program
+  - ask_location
+  - ask_contact_num
+  - ask_email
+  - ask_contact_info
 
 
 entities:
