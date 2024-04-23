@@ -20,12 +20,9 @@ stories:
 
 - story: ask for a scholarship renewal
   steps:
-    - intent: greet
-    - action: utter_greet
     - intent: ask_renew_scholarship
     - action: utter_ask_scholarship
-    - intent: goodbye
-    - action: utter_goodbye
+
 
 - story: ask for SHS program strand 1
   steps:
@@ -113,6 +110,11 @@ stories:
     - intent: goodbye
     - action: utter_goodbye
 
+- story: ask location directly
+  steps:
+    - intent: ask_location
+    - action: utter_location
+
 - story: ask phone number #if landline is available, add landline
   steps:
     - intent: greet
@@ -122,6 +124,11 @@ stories:
     - intent: goodbye
     - action: utter_goodbye
 
+- story: ask phone number directly #if landline is available, add landline
+  steps:
+    - intent: ask_contact_num
+    - action: utter_phone_num
+
 - story: ask email
   steps:
     - intent: greet
@@ -130,6 +137,11 @@ stories:
     - action: utter_email
     - intent: goodbye
     - action: utter_goodbye
+
+- story: ask email directly
+  steps:
+    - intent: ask_email
+    - action: utter_email
 
 - story: ask contact info #email and number
   steps:
