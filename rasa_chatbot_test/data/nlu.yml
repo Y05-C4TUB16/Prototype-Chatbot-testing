@@ -16,6 +16,7 @@ nlu:
     - good morning
     - good evening
     - good afternoon
+#In greet add slangs
 
 - intent: goodbye
   examples: |
@@ -81,12 +82,12 @@ nlu:
     - What are the available [strand]?
     - Which [track] (strand) are offered in Senior High School
 
-- synonym: strand
+- synonym: strand #make synonym SHS
   examples: |
     - program
     - track
     - curriculum
-    - course
+    - course 
     - strands
 
 - intent: inquire_strand1_lsr
@@ -146,7 +147,7 @@ nlu:
 
 #School program
 
-- intent: inform_program
+- intent: inform_program #add options/specify options (six, nine)
   examples: |
     - What programs does the school offer?
     - Can you tell me about the programs available?
@@ -219,3 +220,4 @@ nlu:
     - Is there a way to contact you directly?
     - What contact options do you offer?
 
+# S
