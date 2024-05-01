@@ -100,6 +100,61 @@ stories:
     - action: action_provide_program_information
     - intent: goodbye
     - action: utter_goodbye
+# Users chooses a program
+
+- story: Users ask about school programs 1
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: choose_program_op1
+    - action: utter_information_program1
+    - intent: goodbye
+    - action: utter_goodbye
+
+# - story: Users ask about school programs 2
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent: choose_program_op1
+#     - action: utter_information_program1
+#     - intent: goodbye
+#     - action: utter_goodbye
+
+# - story: Users ask about school programs 3
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent: choose_program_op1
+#     - action: utter_information_program1
+#     - intent: goodbye
+#     - action: utter_goodbye
+
+# - story: Users ask about school programs 4
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent: choose_program_op1
+#     - action: utter_information_program1
+#     - intent: goodbye
+#     - action: utter_goodbye
+
+# - story: Users ask about school programs 5
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent: choose_program_op1
+#     - action: utter_information_program1
+#     - intent: goodbye
+#     - action: utter_goodbye
+
+# - story: Users ask about school programs 6
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent: choose_program_op1
+#     - action: utter_information_program1
+#     - intent: goodbye
+#     - action: utter_goodbye
 
 - story: ask location
   steps:

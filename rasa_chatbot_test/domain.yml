@@ -100,7 +100,36 @@ responses:
     \n1. Discovery and Play\n2. Senior Highschool\n3. Advanced Sciences\n4. IT Programs\n5. Sports Excellence
     \n6. Inclusive Program\n\nFor more information please visit our websiste: https://hedcen.education/?"
 
+# Users Ask programs
+  #Discovery and Play
+  utter_information_program1:
+    - text: "The Discovery and Play (Early Education) Program offers a range of thoughtfully crafted learning opportunities that support children's development across key areas during their early years.
+    By emphasizing discovery and play, our program facilitates accelerated learning, enabling children as young as two years old to acquire fundamental skills through enjoyable and engaging activities that promote learning."
+
+  #Senior HighSchool
+  # utter_information_program2:
+  #   - text: "Our Senior High School Program is designed to cultivate advanced skills and academic proficiency in young adults.
+  #   Through our immersive approach, students have the chance to receive close mentorship from experienced practitioners.
+  #   They will acquire advanced cognitive abilities such as critical thinking, analytical skills, and problem-solving,
+  #   enabling them to apply their knowledge effectively to drive positive change and achieve tangible outcomes."
+
+  #Advanced Sciences
+  # utter_information_program3:
+    # -text:""
+
+  #IT Program
+  # utter_information_program4:
+      # -text:""
+
+  #Sports Excellence
+  # utter_information_program5:
+      # -text:""
+
+  #Inclusive Program
+  # utter_information_program6:
+      # -text:""
   # Profanity
+
   utter_warn_profanity:
     - text: "Pardon me, but the use of offensive language is not permitted here. \n
      We kindly request that you communicate respectfully and refrain from using profanity."

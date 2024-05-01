@@ -156,6 +156,56 @@ nlu:
     - I want to know what programs does the school offer?
     - Which programs can I choose from?
 
+#The user chooses the programs from 1 to 6
+- intent: choose_program_op1
+  examples: |
+    - I choose number 1
+    - I chose the first option
+    - I'll go with option 1
+    - My selection is the first program
+    - Option number 1 for me, please
+    - I pick the first choice
+
+# - intent: choose_program_op2
+#   examples: |
+#     - I choose number 2
+#     - Option 2 is my selection
+#     - I'll go with the second option
+#     - Let me pick number 2
+#     - Second choice, please
+
+# - intent: choose_program_op3
+#   examples: |
+#     - I'm going with number 3
+#     - Option 3 is what I want
+#     - Third option for me
+#     - I choose the third program
+#     - My selection is number 3
+
+# - intent: choose_program_op4
+#   examples: |
+#     - Number 4 is my choice
+#     - Option 4, please
+#     - I'll choose the fourth one
+#     - My selection is program number 4
+#     - I'm going with the fourth option
+
+# - intent: choose_program_op5
+#   examples: |
+#     - I choose number 5
+#     - I'm going with the fifth option
+#     - Fifth program, please
+#     - My pick is option 5
+#     - Let's go with number 5
+
+#- intent: choose_program_op6
+#  examples: |
+#    - I choose number 6
+#    - Sixth option is my selection
+#    - I'll go with the last one, number 6
+#    - My selection is program number 6
+#    - I choose option 6
+
 - intent: ask_location
   examples: |
     - Where's your school located?
