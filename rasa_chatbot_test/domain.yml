@@ -5,9 +5,9 @@ intents:
   - goodbye
   - affirm
   - deny
-  - ask_renew_scholarship
-  - ask_scholarship_process
-  - scholarship_type
+  # - ask_renew_scholarship
+  # - ask_scholarship_process
+  # - scholarship_type
   - ask_strand
   - inquire_strand1_lsr
   - inquire_strand2_ttd
@@ -24,26 +24,27 @@ intents:
 
 
 entities:
-  - scholarship
+  # - scholarship
   - strand
 
-slots:
-  scholarship:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: scholarship
+# slots:
+#   scholarship:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: scholarship
 
 
 actions:
-  - action_ask_scholarship
+  # - action_ask_scholarship
   - action_ask_strand
   - action_handle_swearing
-  - action_provide_program_information #When user ask for the Program
+  - action_provide_program_information # When user ask for the Program
+  - action_default_fallback
 
 
-#CHECK ALL CAPITALIZATIONS, GRAMMARS, INDENTATIONS, AND PUNCTUATIONS
-#ALSO MAKE ALL RESPONSES AS DIRECT, CLEAR, AND SHORT AS POSSIBLE
+# CHECK ALL CAPITALIZATIONS, GRAMMARS, INDENTATIONS, AND PUNCTUATIONS
+# ALSO MAKE ALL RESPONSES AS DIRECT, CLEAR, AND SHORT AS POSSIBLE
 
 
 responses:
@@ -53,11 +54,11 @@ responses:
   utter_goodbye:
   - text: "You're welcome, Goodbye"
 
-  utter_scholarship_process:
-    - text: "Please inform the school personnel that you intend to renew your current scholarship, or alternatively, you can reach us at 0987654321 for further assistance."
+  # utter_scholarship_process:
+  #   - text: "Please inform the school personnel that you intend to renew your current scholarship, or alternatively, you can reach us at 0987654321 for further assistance."
 
-  utter_ask_scholarship:
-    - text: "Can you please specify your scholarship type?"
+  # utter_ask_scholarship:
+  #   - text: "Can you please specify your scholarship type?"
 
   utter_available_strand:
     - text: "Our SHS Program has six strands that students can choose from. The modules offered under these strands are open not only to HEDCen students but also
@@ -101,26 +102,29 @@ responses:
 
   # Profanity
   utter_warn_profanity:
-    - text: "Pardon me, but the use of offensive language is not permitted here.
+    - text: "Pardon me, but the use of offensive language is not permitted here. \n
      We kindly request that you communicate respectfully and refrain from using profanity."
 
 
   utter_location:
-    - text: "We are located at: 95 Beverly Hills Ave., Beverly Hills Subd. , Taytay, Philippines, 1920. You're welcome to visit us during school hours!"
+    - text: "We are located at: 95 Beverly Hills Ave., Beverly Hills Subd. , Taytay, Philippines, 1920."
 
-  utter_phone_num: #if landline is available, add landline
-    - text: "Our contact number is: 0917 558 2968. Please don't hesitate to get in touch with us using this number for any questions or assistance you may require."
+  utter_phone_num: # if landline is available, add landline
+    - text: "Our contact number is: 0917 558 2968.\nPlease don't hesitate to get in touch with us using this number for any questions or assistance you may require."
 
   utter_email:
-    - text: "Here's our email address: info@hedcen.education. Feel free to reach out to us there for any further assistance you may need."
+    - text: "Here's our email address: info@hedcen.education.\nFeel free to reach out to us there for any further assistance you may need."
 
-  utter_contact_info: #check grammar
-    - text: "Certainly! Here's the contact information for our school:
+  utter_contact_info: # check grammar
+    - text: "Certainly! Here's our:\nEmail: info@hedcen.education\nContact Number: 0917 558 2968 "
 
-             Email: info@hedcen.education
-             Contact Number: 0917 558 2968
+  utter_rephrase:
+    - text: "I'm sorry I didn't understand that, can you please rephrase it?"
 
-             You can reach out to us via email or phone for any inquiries or assistance you may need!"
+  utter_default:
+    - text: "I'm sorry I'm only a school chatbot and I'm not sure how to help with that. Can you try something else?"
+
+# add responses as sent by christian
 
 session_config:
   session_expiration_time: 60

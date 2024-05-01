@@ -52,25 +52,25 @@ nlu:
     - not really
 
 
-- intent: ask_renew_scholarship
-  examples: |
-    - when can I renew my [scholarship](scholarship)?
-    - how can I renew my [scholarship](scholarship)?
-    - how can I renew my [pag-ibig scholarship](scholarship)?
-    - any info with regards to the [scholarship](scholarship)?
-    - who to approach with regards to the [scholarship](scholarship)?
+# - intent: ask_renew_scholarship
+#   examples: |
+#     - when can I renew my [scholarship](scholarship)?
+#     - how can I renew my [scholarship](scholarship)?
+#     - how can I renew my [pag-ibig scholarship](scholarship)?
+#     - any info with regards to the [scholarship](scholarship)?
+#     - who to approach with regards to the [scholarship](scholarship)?
 
-- intent: ask_scholarship_process
-  examples: |
-    - what's the process for the [scholarship](scholarship) renewal?
-    - what's the process for renewal of the [scholarship](scholarship)?
-    - when can I process the renewal of the [scholarship](scholarship)?
+# - intent: ask_scholarship_process
+#   examples: |
+#     - what's the process for the [scholarship](scholarship) renewal?
+#     - what's the process for renewal of the [scholarship](scholarship)?
+#     - when can I process the renewal of the [scholarship](scholarship)?
 
-- intent: scholarship_type
-  examples: |
-    - [pag-ibig](scholarship)
-    - [metrobank](scholarship)
-    - [government](scholarship)
+# - intent: scholarship_type
+#   examples: |
+#     - [pag-ibig](scholarship)
+#     - [metrobank](scholarship)
+#     - [government](scholarship)
     
 - intent: ask_strand
   examples: |
@@ -220,4 +220,4 @@ nlu:
     - Is there a way to contact you directly?
     - What contact options do you offer?
 
-# S
+# add inquiries as sent by christian

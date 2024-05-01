@@ -7,21 +7,21 @@ stories:
   - intent: greet
   - action: utter_greet
 
-- story: ask for a specific scholarship renewal
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: ask_renew_scholarship
-    - action: utter_ask_scholarship
-    - intent: scholarship_type
-    - action: action_ask_scholarship
-    - intent: goodbye
-    - action: utter_goodbye
+# - story: ask for a specific scholarship renewal
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent: ask_renew_scholarship
+#     - action: utter_ask_scholarship
+#     - intent: scholarship_type
+#     - action: action_ask_scholarship
+#     - intent: goodbye
+#     - action: utter_goodbye
 
-- story: ask for a scholarship renewal
-  steps:
-    - intent: ask_renew_scholarship
-    - action: utter_ask_scholarship
+# - story: ask for a scholarship renewal
+#   steps:
+#     - intent: ask_renew_scholarship
+#     - action: utter_ask_scholarship
 
 
 - story: ask for SHS program strand 1
@@ -151,3 +151,5 @@ stories:
     - action: utter_contact_info
     - intent: goodbye
     - action: utter_goodbye
+
+# add stories, check nlu
