@@ -92,6 +92,25 @@ class ActionProvideProgramInformation(Action):
         return []
 
 
+#Options if user chooses a program.
+class ActionInformationProgram1(Action):
+    def name(self) -> Text:
+        return "action_information_program1"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # Retrieve the response text for utter_information_program1 from domain.yml
+        response_text = next(
+            filter(lambda x: x['text'] is not None,
+                   domain['responses']['utter_information_program1'])
+        )['text']
+
+        # Send the response to the user
+        dispatcher.utter_message(text=response_text)
+
+        return []
+
 class ActionDefaultFallback(Action):
 
     def name(self) -> Text:

@@ -21,6 +21,7 @@ intents:
   - ask_contact_num
   - ask_email
   - ask_contact_info
+  - choose_program_op1
 
 
 entities:
@@ -41,6 +42,7 @@ actions:
   - action_handle_swearing
   - action_provide_program_information # When user ask for the Program
   - action_default_fallback
+  - action_information_program1
 
 
 # CHECK ALL CAPITALIZATIONS, GRAMMARS, INDENTATIONS, AND PUNCTUATIONS
@@ -98,7 +100,7 @@ responses:
   utter_information_programs:
     - text: "The school offers a diverse range of programs to cater to different interests and needs:
     \n1. Discovery and Play\n2. Senior Highschool\n3. Advanced Sciences\n4. IT Programs\n5. Sports Excellence
-    \n6. Inclusive Program\n\nFor more information please visit our websiste: https://hedcen.education/?"
+    \n6. Inclusive Program\n\nFor more information please visit our websiste: https://hedcen.education/"
 
 # Users Ask programs
   #Discovery and Play
