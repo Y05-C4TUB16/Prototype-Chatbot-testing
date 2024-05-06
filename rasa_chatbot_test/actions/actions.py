@@ -2,8 +2,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import UserUtteranceReverted
-# New Imported
+from rasa_sdk.events import UserUtteranceReverted, ConversationPaused
 from rasa_sdk.events import SlotSet
 
 
@@ -148,32 +147,61 @@ class ActionSetProgramOption(Action):
 #         return []
 
 
-# Action Default fallback
-
-class ActionDefaultFallback(Action):
-
-    def name(self) -> Text:
-        return "action_default_fallback"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(response="utter_default")
-
-        return [UserUtteranceReverted()]
-
-# class ActionTwoStageFallback(Action):
-# 
+# class ActionDefaultFallback(Action):
+#
 #     def name(self) -> Text:
-#         return "action_two_stage_fallback"
-# 
+#         return "action_default_fallback"
+#
 #     def run(self, dispatcher: CollectingDispatcher,
 #             tracker: Tracker,
 #             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-# 
 #         dispatcher.utter_message(response="utter_default")
-# 
+#
 #         return [UserUtteranceReverted()]
+
+
+# Action Human Handoff
+# ---STILL UNDER PROGRESS---
+class ActionAskHandoff(Action):
+    def name(self) -> Text:
+        return "action_ask_handoff"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        # ask the user if they want to be transferred to a human
+        dispatcher.utter_message(response="utter_ask_handoff")
+
+        return [UserUtteranceReverted()]
+
+
+class ActionHumanHandoff(Action):
+    def name(self) -> Text:
+        return "action_handoff_to_human"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        # check if the user wants to transfer to a human
+        intent = tracker.latest_message.get('text')
+
+        if intent == "affirm":
+            dispatcher.utter_message(text="I am passing you to a human...")
+            # take note, it's much better if customized sya based on our limitations on paper and
+            # --may option to chat with the chatbot again
+
+            # pause conversation
+            return [ConversationPaused()]
+        elif intent == "deny":
+            # continue conversation
+            dispatcher.utter_message(text="Alright, let's continue.")
+            return []
 
 
 # This can be used when the user is given options:

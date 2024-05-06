@@ -207,4 +207,19 @@ stories:
     - intent: goodbye
     - action: utter_goodbye
 
+- story: handle fallback and transfer to human
+  steps:
+  - intent: nlu_fallback
+  - action: action_ask_handoff
+  - intent: affirm
+  - action: action_handoff_to_human
+
+- story: handle fallback and transfer to human denied
+  steps:
+  - intent: nlu_fallback
+  - action: action_ask_handoff
+  - intent: deny
+  - action: action_handoff_to_human
+
+
 # add stories, check nlu

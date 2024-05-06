@@ -35,7 +35,7 @@ pipeline:
 - name: ResponseSelector
   epochs: 100
   constrain_similarities: true
-- name: FallbackClassifier      # if I remember correctly this one will handle the typos?
+- name: FallbackClassifier      # fallbacks i guess
   threshold: 0.7
   ambiguity_threshold: 0.1
 
@@ -44,9 +44,6 @@ pipeline:
 policies:
 - name: MemoizationPolicy
 - name: RulePolicy
-  core_fallback_threshold: 0.4
-  core_fallback_name: "action_default_fallback" # will handle the fallbacks or unknown intents
-  enable_fallback_prediction: true
 #   - name: UnexpecTEDIntentPolicy
 #     max_history: 5
 #     epochs: 100

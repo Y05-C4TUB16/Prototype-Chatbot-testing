@@ -12,15 +12,12 @@ rules:
     - intent: swear
     - action: utter_warn_profanity
 
-- rule: nlu default fallback
-  steps:
-    - intent: nlu_fallback
-    - action: action_default_fallback
+#- rule: nlu default fallback
+#  steps:
+#    - intent: nlu_fallback
+#    - action: action_default_fallback
 
--rule: ask user to rephrase
-steps:
-    - intent: nlu_fallback
-    - action: utter_rephrase
+
 
 # add two stage fallback
 # add human handoff and ask if they would like that option
