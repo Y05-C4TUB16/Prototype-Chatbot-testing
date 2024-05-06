@@ -3,6 +3,8 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import UserUtteranceReverted
+# New Imported
+from rasa_sdk.events import SlotSet
 
 
 # class ActionAskScholarship(Action):
@@ -46,15 +48,16 @@ class ActionAskStrand(Action):
         strand = tracker.get_slot("strand") or strand_slot
 
         if strand:
-            response = ("If you wish to know more about our available programs you may visit the school for more a knowledge")
+            response = ("If you wish to know more about our available programs you "
+                        "may visit the school for more a knowledge")
         else:
             response = "Sorry, I could not provide any info regarding your question."
 
         dispatcher.utter_message(text=response)
 
         return []
-    
-    
+
+
 # Profanity
 class ActionHandleSwearing(Action):
     def name(self) -> Text:
@@ -63,53 +66,89 @@ class ActionHandleSwearing(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
         last_intent = tracker.latest_message['intent'].get('name')
-        
+
         if last_intent == 'swear':
             dispatcher.utter_message(template="utter_warn_profanity")
-        
+
         return []
-    
-# User Asks for the Programs in the school.
-class ActionProvideProgramInformation(Action):
+
+
+# User Asks School Program list.
+class ActionProvideProgramInfo(Action):
     def name(self) -> Text:
-        return "action_provide_program_information"
+        return "action_provide_program_list"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(response="utter_list_program")
+
+        return []
+
+
+class ActionSetProgramOption(Action):
+    def name(self) -> Text:
+        return "action_set_program_option"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        # Programs information to be displayed to the user
-        program_info = ("The school offers a diverse range of programs to cater to different interests and needs:"
-                        "\n1. Discovery and Play\n2. Senior High school\n3. Advanced Sciences\n4. IT Programs"
-                        "\n5. Sports Excellence\n6. Inclusive Program\n"
-                        "\nFor more information please visit our website: https://hedcen.education/?")
+        intent_name = tracker.latest_message["intent"].get("name")
+        program_option = intent_name.split("_")[-1]
 
-# Send the program information to the user
-        dispatcher.utter_message(text=program_info)
-
-        return []
+        return [SlotSet("program_option", program_option)]
 
 
-#Options if user chooses a program.
-class ActionInformationProgram1(Action):
-    def name(self) -> Text:
-        return "action_information_program1"
+# I'm not sure about this code sasabog na utak ko kaka trial and error - YOS
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # Retrieve the response text for utter_information_program1 from domain.yml
-        response_text = next(
-            filter(lambda x: x['text'] is not None,
-                   domain['responses']['utter_information_program1'])
-        )['text']
+# class ActionUtterDetailsProgram(Action):
+#     def name(self) -> Text:
+#         return "action_utter_details_program"
+#
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#
+#         program_option = tracker.get_slot("program_option")
+#
+#         if program_option in ["1", "2", "3", "4", "5", "6"]:
+#             # Use the program_option to determine which program details to provide
+#             template_name = f"utter_details_program{program_option}"
+#             dispatcher.utter_message(template=template_name)
+#         else:
+#             dispatcher.utter_message(template="utter_invalid_option")
+#
+#         return []
 
-        # Send the response to the user
-        dispatcher.utter_message(text=response_text)
+# class ActionUtterDetailsProgram(Action):
+#     def name(self) -> Text:
+#         return "action_utter_details_program"
+#
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#
+#         program_option = tracker.get_slot("program_option")
+#
+#         if program_option == "1":
+#             dispatcher.utter_message(template="utter_details_program1")
+#         elif program_option == "2":
+#             dispatcher.utter_message(template="utter_details_program2")
+#         elif program_option == "3":
+#             dispatcher.utter_message(template="utter_details_program3")
+#         elif program_option == "4":
+#             dispatcher.utter_message(template="utter_details_program4")
+#         elif program_option == "5":
+#             dispatcher.utter_message(template="utter_details_program5")
+#         elif program_option == "6":
+#             dispatcher.utter_message(template="utter_details_program6")
+#
+#         return []
 
-        return []
+
+# Action Default fallback
 
 class ActionDefaultFallback(Action):
 
@@ -119,7 +158,6 @@ class ActionDefaultFallback(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
         dispatcher.utter_message(response="utter_default")
 
         return [UserUtteranceReverted()]

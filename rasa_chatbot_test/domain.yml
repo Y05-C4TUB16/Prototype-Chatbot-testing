@@ -21,12 +21,19 @@ intents:
   - ask_contact_num
   - ask_email
   - ask_contact_info
-  - choose_program_op1
+  - Inquire_program_option1
+  - Inquire_program_option2
+  - Inquire_program_option3
+  - Inquire_program_option4
+  - Inquire_program_option5
+  - Inquire_program_option6
+
 
 
 entities:
   # - scholarship
   - strand
+
 
 # slots:
 #   scholarship:
@@ -35,14 +42,42 @@ entities:
 #       - type: from_entity
 #         entity: scholarship
 
+# School program list
+slots:
+  program_option:
+    type: any
+    mappings:
+      - type: from_text
+        intent: Inquire_details_program1
+        role: program_option
+      - type: from_text
+        intent: Inquire_details_program2
+        role: program_option
+      - type: from_text
+        intent: Inquire_details_program3
+        role: program_option
+      - type: from_text
+        intent: Inquire_details_program4
+        role: program_option
+      - type: from_text
+        intent: Inquire_details_program5
+        role: program_option
+      - type: from_text
+        intent: Inquire_details_program6
+        role: program_option
 
 actions:
   # - action_ask_scholarship
   - action_ask_strand
+  # Profanity
   - action_handle_swearing
-  - action_provide_program_information # When user ask for the Program
+  # School Program
+  - action_provide_program_list
+  - action_set_program_option
+  - action_utter_details_program
+  # Default fallback
   - action_default_fallback
-  - action_information_program1
+
 
 
 # CHECK ALL CAPITALIZATIONS, GRAMMARS, INDENTATIONS, AND PUNCTUATIONS
@@ -96,40 +131,59 @@ responses:
     come up with publishable and marketable material that will cater to different audiences. Included in the course are production and design subjects to help create industry standard written work."
 
 
-  # School Programs
-  utter_information_programs:
+#School Programs
+  utter_list_program:
     - text: "The school offers a diverse range of programs to cater to different interests and needs:
     \n1. Discovery and Play\n2. Senior Highschool\n3. Advanced Sciences\n4. IT Programs\n5. Sports Excellence
-    \n6. Inclusive Program\n\nFor more information please visit our websiste: https://hedcen.education/"
+    \n6. Inclusive Program\n"
 
-# Users Ask programs
+
+# Users Ask programs:
+
   #Discovery and Play
-  utter_information_program1:
+  utter_details_program1:
     - text: "The Discovery and Play (Early Education) Program offers a range of thoughtfully crafted learning opportunities that support children's development across key areas during their early years.
-    By emphasizing discovery and play, our program facilitates accelerated learning, enabling children as young as two years old to acquire fundamental skills through enjoyable and engaging activities that promote learning."
+    By emphasizing discovery and play, our program facilitates accelerated learning, enabling children as young as two years old to acquire fundamental skills through enjoyable and engaging activities that promote learning.
+    \nFor more information please visit our website: https://hedcen.education/"
 
-  #Senior HighSchool
-  # utter_information_program2:
-  #   - text: "Our Senior High School Program is designed to cultivate advanced skills and academic proficiency in young adults.
-  #   Through our immersive approach, students have the chance to receive close mentorship from experienced practitioners.
-  #   They will acquire advanced cognitive abilities such as critical thinking, analytical skills, and problem-solving,
-  #   enabling them to apply their knowledge effectively to drive positive change and achieve tangible outcomes."
 
-  #Advanced Sciences
-  # utter_information_program3:
-    # -text:""
+# Senior HighSchool
+  utter_details_program2:
+    - text: "Our Senior High School Program is designed to cultivate advanced skills and academic proficiency in young adults.
+     Through our immersive approach, students have the chance to receive close mentorship from experienced practitioners.
+     They will acquire advanced cognitive abilities such as critical thinking, analytical skills, and problem-solving,
+     enabling them to apply their knowledge effectively to drive positive change and achieve tangible outcomes.
+     \nFor more information please visit our website: https://hedcen.education/"
 
-  #IT Program
-  # utter_information_program4:
-      # -text:""
 
-  #Sports Excellence
-  # utter_information_program5:
-      # -text:""
+#  Advanced Sciences
+  utter_details_program3:
+    - text: "HEDCen's Science Program begins with a single integrated Science subject in the primary levels.
+    Starting from Grade 4, the sciences are taught as two separate subjects: Life Sciences and Physical Sciences.
+    From Grades 5 to 10, the sciences are divided into four distinct subjects organized across two departments.
+    The Life Sciences Department covers Biology and Environmental Science, while the Physical Sciences Department covers Chemistry and Physics.
+    \nFor more information please visit our website: https://hedcen.education/"
 
-  #Inclusive Program
-  # utter_information_program6:
-      # -text:""
+#  IT Program
+  utter_details_program4:
+    - text: "HEDCen in partnership with iCarnegie Global Learning (powered by Carnegie Mellon University, a world leader in the field of Computer Science and Robotics) will empower children with skills in Information Technology through its internationally competitive IT curriculum in SY 2016-2017.
+      HEDCen is presently 1 out of 3 schools in the Philippines to offer this program.
+      \nFor more information please visit our website: https://hedcen.education/"
+
+# Sports Excellence
+  utter_details_program5:
+    - text: "Classes are held three periods per week. Additionally, the HEDCen Varsity Program is focused on cultivating not only kinesthetically inclined children but also any child demonstrating diligence and interest in sports participation.
+      The program is dedicated to empowering its participants with the skills and abilities necessary for excellence and has garnered local recognition within the football community for its sustained success.
+      \nFor more information please visit our website: https://hedcen.education/"
+
+
+#Inclusive Program
+  utter_details_program6:
+    - text: "The school accepts the enrollment of children with learning disabilities and those who are academically or behaviorally challenged BUT are considered highly functional or educable.
+      HEDCen does NOT have a separate formal special education program but instead offers the regular school curriculum as its basis for special consideration as may be necessary.
+      \nFor more information please visit our website: https://hedcen.education/."
+
+
   # Profanity
 
   utter_warn_profanity:

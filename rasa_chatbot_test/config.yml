@@ -13,6 +13,13 @@ language: en
 pipeline:
 - name: WhitespaceTokenizer
 - name: CRFEntityExtractor
+  # I added features for The School program - YOS
+  features:
+    - low
+    - title
+    - upper
+    - digit
+    - pattern
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
