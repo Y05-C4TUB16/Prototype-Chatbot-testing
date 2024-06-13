@@ -5,9 +5,6 @@ intents:
   - goodbye
   - affirm
   - deny
-  # - ask_renew_scholarship
-  # - ask_scholarship_process
-  # - scholarship_type
   - ask_strand
   - inquire_strand1_lsr
   - inquire_strand2_ttd
@@ -27,23 +24,34 @@ intents:
   - Inquire_program_option4
   - Inquire_program_option5
   - Inquire_program_option6
+  - ask_enrollment_info
+  - educ_level
+  - grade_level_eed
+  - grade_level_gs_and_junior
+  - grade_level_senior
+  - new_student
+  - old_student
 
 
 
 entities:
-  # - scholarship
   - strand
+  - enrollment_info
+  - student_status
 
-
-# slots:
-#   scholarship:
-#     type: text
-#     mappings:
-#       - type: from_entity
-#         entity: scholarship
 
 # School program list
 slots:
+  student_status:
+    type: categorical
+    mappings:
+      - type: from_intent
+        intent: new_student
+        value: new
+      - type: from_intent
+        intent: old_student
+        value: old
+
   program_option:
     type: any
     mappings:
@@ -67,7 +75,6 @@ slots:
         role: program_option
 
 actions:
-  # - action_ask_scholarship
   - action_ask_strand
   # Profanity
   - action_handle_swearing
@@ -78,8 +85,13 @@ actions:
   # Default fallback | human handoff
   - action_handoff_to_human
   - action_ask_handoff
-
-
+#  - action_enrollment_info
+#  - action_old_or_new
+#  - action_enrollment_info_response_old
+#  - action_enrollment_info_response_new
+  - action_enrollment_info
+  - action_enrollment_info_response
+  - action_old_or_new
 
 # CHECK ALL CAPITALIZATIONS, GRAMMARS, INDENTATIONS, AND PUNCTUATIONS
 # ALSO MAKE ALL RESPONSES AS DIRECT, CLEAR, AND SHORT AS POSSIBLE
@@ -206,7 +218,36 @@ responses:
   utter_ask_handoff:
     - text: "I'm sorry, I'm not sure how to help with that. Would you like me to transfer you to a human?"
 
+  utter_grade_level:
+    - text: "What grade level is the student in?"
+
+  utter_educ_level:
+    - text: "What educational level is the student in? (Early Education Department(EED), Grade School, Junior High School, or Senior High School)"
+
+  utter_old_new:
+    - text: "Is the student an old student or a new student?"
+
+  utter_old_eed:
+    - text: "Please refer to our website to apply for an old student for the EED level:\n https://hedcen.education/admissions/oldstudents/early-education-department-eed-2/"
+
+  utter_old_gs_and_jhs:
+    - text: "Please refer to our website to apply for an old student for the Grade School and Junior High School level:\n https://hedcen.education/admissions/oldstudents/grade-school-and-junior-high-school-old-students/"
+
+  utter_old_shs:
+    - text: "Please refer to our website to apply for an old student for the Senior High School level:\n https://hedcen.education/admissions/oldstudents/senior-high-school-old-students/"
+
+  utter_new_eed:
+    - text: "Please refer to our website to apply for an new student for the EED level:\n https://hedcen.education/admissions/newstudents/early-education-department-eed/"
+
+  utter_new_gs_and_jhs:
+    - text: "Please refer to our website to apply for an new student for the Grade School and Junior High School level:\n https://hedcen.education/admissions/newstudents/grade-school-and-high-school/"
+
+  utter_new_shs:
+    - text: "Please refer to our website to apply for an new student for the Senior High School level:\n https://hedcen.education/admissions/newstudents/senior-high-school/"
+
+
 # add responses as sent by christian
+
 
 session_config:
   session_expiration_time: 60

@@ -6,31 +6,6 @@ from rasa_sdk.events import UserUtteranceReverted, ConversationPaused
 from rasa_sdk.events import SlotSet
 
 
-# class ActionAskScholarship(Action):
-
-#     def name(self) -> Text:
-#         return "action_ask_scholarship"
-
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-#         # scholarship = tracker.latest_message['text']
-#         # ask_scholarship = self.ask_renew_scholarship(scholarship)
-
-#         scholarship_slot = next(tracker.get_latest_entity_values("scholarship"), None)
-#         scholarship = tracker.get_slot("scholarship") or scholarship_slot
-
-#         if scholarship:
-#             response = "You may renew your scholarship in the registrars office upon enrollment."
-#         else:
-#             response = "Sorry I could not provide any info regarding your scholarship renewal."
-
-#         dispatcher.utter_message(text=response)
-
-#         return []
-
-
 class ActionAskStrand(Action):
 
     def name(self) -> Text:
@@ -202,6 +177,68 @@ class ActionHumanHandoff(Action):
             # continue conversation
             dispatcher.utter_message(text="Alright, let's continue.")
             return []
+
+
+class ActionEnrollmentInfo(Action):
+    def name(self) -> Text:
+        return "action_enrollment_info"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(response="utter_old_new")
+        return []
+
+
+class ActionOldOrNew(Action):
+    def name(self) -> Text:
+        return "action_old_or_new"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        intent = tracker.latest_message.get('intent').get('name')
+        if intent == "new_student":
+            dispatcher.utter_message(response="utter_educ_level")
+            return [SlotSet("student_status", "new_student")]
+        elif intent == "old_student":
+            dispatcher.utter_message(response="utter_educ_level")
+            return [SlotSet("student_status", "old_student")]
+
+
+class ActionEnrollmentInfoResponse(Action):
+    def name(self) -> Text:
+        return "action_enrollment_info_response"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+
+        student_status = tracker.get_slot("student_status")
+        intent = tracker.latest_message.get('intent').get('name')
+
+        if student_status == "old_student":
+            if intent == "grade_level_eed":
+                dispatcher.utter_message(response="utter_old_eed")
+            elif intent == "grade_level_gs_and_junior":
+                dispatcher.utter_message(response="utter_old_gs_and_jhs")
+            elif intent == "grade_level_senior":
+                dispatcher.utter_message(response="utter_old_shs")
+        elif student_status == "new_student":
+            if intent == "grade_level_eed":
+                dispatcher.utter_message(response="utter_new_eed")
+            elif intent == "grade_level_gs_and_junior":
+                dispatcher.utter_message(response="utter_new_gs_and_jhs")
+            elif intent == "grade_level_senior":
+                dispatcher.utter_message(response="utter_new_shs")
+
+        return []
 
 
 # This can be used when the user is given options:

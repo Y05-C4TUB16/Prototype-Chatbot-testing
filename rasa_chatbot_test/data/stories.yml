@@ -7,23 +7,6 @@ stories:
   - intent: greet
   - action: utter_greet
 
-# - story: ask for a specific scholarship renewal
-#   steps:
-#     - intent: greet
-#     - action: utter_greet
-#     - intent: ask_renew_scholarship
-#     - action: utter_ask_scholarship
-#     - intent: scholarship_type
-#     - action: action_ask_scholarship
-#     - intent: goodbye
-#     - action: utter_goodbye
-
-# - story: ask for a scholarship renewal
-#   steps:
-#     - intent: ask_renew_scholarship
-#     - action: utter_ask_scholarship
-
-
 - story: ask for SHS program strand 1
   steps:
     - intent: greet
@@ -209,17 +192,132 @@ stories:
 
 - story: handle fallback and transfer to human
   steps:
-  - intent: nlu_fallback
-  - action: action_ask_handoff
-  - intent: affirm
-  - action: action_handoff_to_human
+    - intent: nlu_fallback
+    - action: action_ask_handoff
+    - intent: affirm
+    - action: action_handoff_to_human
 
 - story: handle fallback and transfer to human denied
   steps:
-  - intent: nlu_fallback
-  - action: action_ask_handoff
-  - intent: deny
-  - action: action_handoff_to_human
+    - intent: nlu_fallback
+    - action: action_ask_handoff
+    - intent: deny
+    - action: action_handoff_to_human
+
+#- story: Enrollment info for old students
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: ask_enrollment_info
+#  - action: utter_educ_level
+#  - intent: educ_level
+#  - action: action_enrollment_info
+#  - slot_was_set:
+#      - student_status: "old"
+#  - action: action_enrollment_info_response
+#
+#- story: Enrollment info for new students
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: ask_enrollment_info
+#  - action: utter_educ_level
+#  - intent: educ_level
+#  - action: action_enrollment_info
+#  - slot_was_set:
+#      - student_status: "old"
+#  - action: action_enrollment_info_response
+
+- story: Enrollment info for old EED students
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_enrollment_info
+  - action: action_enrollment_info
+  - intent: old_student
+  - action: action_old_or_new
+  - slot_was_set:
+      - student_status: "old"
+  - intent: educ_level
+  - action: utter_grade_level
+  - intent: grade_level_eed
+  - action: action_enrollment_info_response
+
+- story: Enrollment info for old GS and junior students
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_enrollment_info
+  - action: action_enrollment_info
+  - intent: old_student
+  - action: action_old_or_new
+  - slot_was_set:
+      - student_status: "old"
+  - intent: educ_level
+  - action: utter_grade_level
+  - intent: grade_level_gs_and_junior
+  - action: action_enrollment_info_response
+
+- story: Enrollment info for old senior students
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_enrollment_info
+  - action: action_enrollment_info
+  - intent: old_student
+  - action: action_old_or_new
+  - slot_was_set:
+      - student_status: "old"
+  - intent: educ_level
+  - action: utter_grade_level
+  - intent: grade_level_senior
+  - action: action_enrollment_info_response
+
+- story: Enrollment info for new EED students
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_enrollment_info
+  - action: action_enrollment_info
+  - intent: new_student
+  - action: action_old_or_new
+  - slot_was_set:
+      - student_status: "new"
+  - intent: educ_level
+  - action: utter_grade_level
+  - intent: grade_level_eed
+  - action: action_enrollment_info_response
+
+- story: Enrollment info for new GS and junior students
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_enrollment_info
+  - action: action_enrollment_info
+  - intent: new_student
+  - action: action_old_or_new
+  - slot_was_set:
+      - student_status: "new"
+  - intent: educ_level
+  - action: utter_grade_level
+  - intent: grade_level_gs_and_junior
+  - action: action_enrollment_info_response
+
+- story: Enrollment info for new senior students
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_enrollment_info
+  - action: action_enrollment_info
+  - intent: new_student
+  - action: action_old_or_new
+  - slot_was_set:
+      - student_status: "new"
+  - intent: educ_level
+  - action: utter_grade_level
+  - intent: grade_level_senior
+  - action: action_enrollment_info_response
+
 
 
 # add stories, check nlu

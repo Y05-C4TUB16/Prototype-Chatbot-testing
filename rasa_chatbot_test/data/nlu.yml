@@ -50,27 +50,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
-
-# - intent: ask_renew_scholarship
-#   examples: |
-#     - when can I renew my [scholarship](scholarship)?
-#     - how can I renew my [scholarship](scholarship)?
-#     - how can I renew my [pag-ibig scholarship](scholarship)?
-#     - any info with regard to the [scholarship](scholarship)?
-#     - who to approach in regard to the [scholarship](scholarship)?
-
-# - intent: ask_scholarship_process
-#   examples: |
-#     - what's the process for the [scholarship](scholarship) renewal?
-#     - what's the process for renewal of the [scholarship](scholarship)?
-#     - when can I process the renewal of the [scholarship](scholarship)?
-
-# - intent: scholarship_type
-#   examples: |
-#     - [pag-ibig](scholarship)
-#     - [metrobank](scholarship)
-#     - [government](scholarship)
     
 - intent: ask_strand
   examples: |
@@ -329,5 +308,102 @@ nlu:
     - What's the best way to contact you?
     - Is there a way to contact you directly?
     - What contact options do you offer?
+
+- intent: ask_enrollment_info
+  examples: |
+    - What's your [enrollment](enrollment_info) info?
+    - What's your [enrollment](enrollment_info) information?
+    - What about my [enrollment](enrollment_info)?
+    - How do I [enroll](enrollment_info)?
+    - How can I [enroll](enrollment_info)?
+    - How can I [enroll](enrollment_info) my child?
+    - Where can I [enlist](enrollment_info) my child?
+    - Who will I approach in [enrolling](enrollment_info) my child?
+    - What are the details of your [enrollment process](enrollment_info)?
+    - What are the requirements for the [enrollment](enrollment_info)?
+
+- synonym: enrollment_info
+  examples: |
+    - admission
+    - enrollment process
+    - application
+    - enroll 
+    - enrolling
+    - enlist
+
+- intent: educ_level
+  examples: |
+    - early education department
+    - eed
+    - elementary
+    - grade school
+    - junior high
+    -  senior high
+    - junior high school
+    - senior high school
+    - high school
+    - gradeschool
+
+- intent: grade_level_eed
+  examples: |
+    - nursery
+    - play program
+    - kinder
+    - basic awareness program
+    - prep
+    - preparatory
+    - discovery program
+
+- intent: grade_level_gs_and_junior
+  examples: |
+    - grade 1
+    - 1
+    - grade 2
+    - 2
+    - grade 3
+    - 3
+    - grade 4
+    - 4
+    - grade 5
+    - 5
+    - grade 6
+    - 6
+    - grade 7
+    - 7
+    - grade 8
+    - 8
+    - grade 9
+    - 9
+    - grade 10
+    - 10
+
+- intent: grade_level_senior
+  examples: |
+    - grade 11
+    - 11
+    - grade 12
+    - 12
+
+- intent: new_student
+  examples: |
+    - new
+    - new student
+    - he's a new student
+    - she's a new student
+    - my daughter's a new student
+    - my son's a new student
+    - my daughters a new student
+    - my sons a new student
+
+- intent: old_student
+  examples: |
+    - old
+    - old student
+    - he's an old student
+    - she's an old student
+    - my daughter's an old student
+    - my son's an old student
+    - my daughters an old student
+    - my sons an old student
 
 # add inquiries as sent by christian
