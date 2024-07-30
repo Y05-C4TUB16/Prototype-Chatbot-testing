@@ -12,6 +12,12 @@ rules:
     - intent: swear
     - action: utter_warn_profanity
 
+- rule: Welcome path / Feedback
+  steps:
+    - intent: thanks
+    - action: utter_welcome
+
+
 #- rule: nlu default fallback
 #  steps:
 #    - intent: nlu_fallback

@@ -204,30 +204,7 @@ stories:
     - intent: deny
     - action: action_handoff_to_human
 
-#- story: Enrollment info for old students
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#  - intent: ask_enrollment_info
-#  - action: utter_educ_level
-#  - intent: educ_level
-#  - action: action_enrollment_info
-#  - slot_was_set:
-#      - student_status: "old"
-#  - action: action_enrollment_info_response
-#
-#- story: Enrollment info for new students
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#  - intent: ask_enrollment_info
-#  - action: utter_educ_level
-#  - intent: educ_level
-#  - action: action_enrollment_info
-#  - slot_was_set:
-#      - student_status: "old"
-#  - action: action_enrollment_info_response
-
+# enrollment info inquiry
 - story: Enrollment info for old EED students
   steps:
   - intent: greet
@@ -318,6 +295,59 @@ stories:
   - intent: grade_level_senior
   - action: action_enrollment_info_response
 
+# defaults for grades, financial, and appointment info
+- story: Ask about grades affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_grades
+  - action: action_grades_info
+  - intent: affirm
+  - action: action_handoff_to_human
 
+- story: Ask about grades deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_grades
+  - action: action_grades_info
+  - intent: deny
+  - action: action_handoff_to_human
+
+- story: Ask about financial info affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_financial
+  - action: action_financial_info
+  - intent: affirm
+  - action: action_handoff_to_human
+
+- story: Ask about financial info deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_financial
+  - action: action_financial_info
+  - intent: deny
+  - action: action_handoff_to_human
+
+- story: Ask about appointment affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_appointment
+  - action: action_appointment_info
+  - intent: affirm
+  - action: action_handoff_to_human
+
+- story: Ask about appointment info deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_appointment
+  - action: action_appointment_info
+  - intent: deny
+  - action: action_handoff_to_human
 
 # add stories, check nlu

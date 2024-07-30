@@ -16,7 +16,9 @@ nlu:
     - good morning
     - good evening
     - good afternoon
-#In greet add slangs
+    - yo
+
+# In greet add slangs
 
 - intent: goodbye
   examples: |
@@ -30,7 +32,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-    - thank you goodbye
 
 - intent: affirm
   examples: |
@@ -40,6 +41,9 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - ok
+    - ok then
+    
 
 - intent: deny
   examples: |
@@ -50,6 +54,36 @@ nlu:
     - don't like that
     - no way
     - not really
+
+- intent: thanks
+  examples: |
+    - ok thanks
+    - thank you
+    - thanks
+    - nice, thank you
+    - ok, thank you
+    - thank you, goodbye
+    - thank you sm
+    - thank u
+    - thank you so much!
+    - ty
+    - ok ty
+    - oki ty
+    - okay ty
+    - okay thank you
+    - tysm
+    - salamat po 
+    - salamat
+    
+
+- intent: complaint
+  examples: |
+    - why are you not helping me?
+    - why are you like this?
+    - this isn't helping
+    - this isnt helping
+    - this is not helping
+    
     
 - intent: ask_strand
   examples: |
@@ -60,6 +94,7 @@ nlu:
     - What academic options are there in your Senior High School [program](strand)?
     - What are the available [strand]?
     - Which [track] (strand) are offered in Senior High School
+    - What are the programs 
 
 - synonym: strand #make synonym SHS
   examples: |
@@ -120,11 +155,31 @@ nlu:
     - Why the **** are you not helping me?
     - You're useless
     - F**k off
-    - Go to h***
+    - Go to hell
     - Shut the f*** up, you're not helping me
     - I hate you
+    - stfu
+    - f u
+    - i hate this s**t
+    - shut the f*ck up
+    - just shut the f*ck up pls
+    - motherf**cker
+    - mother f**cker
+    - hoe
+    - nigga
+    - n-word
+    - nword
+    - useless
+    - walang kwenta
+    - pota
+    - puta
+    - putang ina
+    - putang ina mo
+    - bobo
+    - ina mo
+    - inang yan
 
-#School program
+# School program
 - lookup: program_option
   examples: |
     - Discovery and Play
@@ -245,6 +300,7 @@ nlu:
     - What can you tell me about option 6?
     - Option 6, which is the Inclusive Program, interests me.
 
+# contact information
 - intent: ask_location
   examples: |
     - Where's your school located?
@@ -309,6 +365,8 @@ nlu:
     - Is there a way to contact you directly?
     - What contact options do you offer?
 
+
+# enrollment info / admission
 - intent: ask_enrollment_info
   examples: |
     - What's your [enrollment](enrollment_info) info?
@@ -357,32 +415,20 @@ nlu:
 - intent: grade_level_gs_and_junior
   examples: |
     - grade 1
-    - 1
     - grade 2
-    - 2
     - grade 3
-    - 3
     - grade 4
-    - 4
     - grade 5
-    - 5
     - grade 6
-    - 6
     - grade 7
-    - 7
     - grade 8
-    - 8
     - grade 9
-    - 9
     - grade 10
-    - 10
 
 - intent: grade_level_senior
   examples: |
     - grade 11
-    - 11
     - grade 12
-    - 12
 
 - intent: new_student
   examples: |
@@ -405,5 +451,60 @@ nlu:
     - my son's an old student
     - my daughters an old student
     - my sons an old student
+
+# grades
+- intent: ask_grades
+  examples: |
+    - can I know about my [grades](grade_info)?
+    - where can I know about my [grades](grade_info)?
+    - who will I ask about my [grades](grade_info)?
+    - who can I approach about my [grades](grade_info)?
+    - who would I refer to about my [grades](grade_info)?
+    - do you know my [gwa](grade_info)?
+    - do you know my [avg](grade_info)?
+    - do you know my [average grade](grade_info)?
+    - do you know my [average](grade_info)?
+    - can I know my [GWA](grade_info)?
+    
+
+- synonym: grades
+  examples: |
+    - grades
+    - average
+    - avg
+    - gwa
+    - GWA
+    - average grade
+
+# financial
+- intent: ask_financial
+  examples: |
+    - can I know about my [school balance](finance)?
+    - can I know my [tuition](finance)?
+    - do I still have a [balance](finance)?
+    - where can I pay the remainder of the [tuition fee](finance)?
+    - where do I pay for the [tuition fee](finance)?
+    - do I have remaining [fees](finance)?
+    - how much is my [tuition fee](finance)?
+    - who would I approach with regards to my [tuition](finance)?
+    - 
+
+- synonym: tuition
+  examples: |
+    - tuition
+    - tuition fee
+    - balance
+    - fees
+    - fee
+    - remaining balance
+
+# appointment
+- intent: ask_appointment
+  examples: |
+    - can I file for an [appointment](appointment)?
+    - where can I file and [appointment](appointment)?
+    - can you schedule me an [appointment](appointment)?
+    - where can I schedule an [appointment](appointment)?
+    - can I schedule an [appointment](appointment) for
 
 # add inquiries as sent by christian

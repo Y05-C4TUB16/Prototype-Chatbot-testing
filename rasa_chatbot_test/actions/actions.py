@@ -149,6 +149,7 @@ class ActionAskHandoff(Action):
     ) -> List[Dict[Text, Any]]:
         # ask the user if they want to be transferred to a human
         dispatcher.utter_message(response="utter_ask_handoff")
+        dispatcher.utter_message(response="utter_ask_handoff2")
 
         return [UserUtteranceReverted()]
 
@@ -239,6 +240,57 @@ class ActionEnrollmentInfoResponse(Action):
                 dispatcher.utter_message(response="utter_new_shs")
 
         return []
+
+
+class ActionGradesInfo(Action):
+    def name(self) -> Text:
+        return "action_grades_info"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+
+        grade = tracker.get_slot('grade_inquiry')
+        dispatcher.utter_message(response="utter_grades_info")
+        dispatcher.utter_message(response="utter_grades_info2")
+        return [SlotSet("grade_inquiry", grade)]
+
+
+class ActionFinancialInfo(Action):
+    def name(self) -> Text:
+        return "action_financial_info"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+
+        finance = tracker.get_slot('financial_inquiry')
+        dispatcher.utter_message(response="utter_financial_info")
+        dispatcher.utter_message(response="utter_financial_info2")
+        return [SlotSet("financial_inquiry", finance)]
+
+
+class ActionAppointmentInfo(Action):
+    def name(self) -> Text:
+        return "action_appointment_info"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+
+        app = tracker.get_slot('appointment_inquiry')
+        dispatcher.utter_message(response="utter_appointment_info")
+        dispatcher.utter_message(response="utter_appointment_info2")
+        return [SlotSet("appointment_inquiry", app)]
 
 
 # This can be used when the user is given options:

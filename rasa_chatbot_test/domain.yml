@@ -5,6 +5,8 @@ intents:
   - goodbye
   - affirm
   - deny
+  - thanks
+  - complaint
   - ask_strand
   - inquire_strand1_lsr
   - inquire_strand2_ttd
@@ -31,13 +33,17 @@ intents:
   - grade_level_senior
   - new_student
   - old_student
-
-
+  - ask_grades
+  - ask_financial
+  - ask_appointment
 
 entities:
   - strand
   - enrollment_info
   - student_status
+  - grade_info
+  - finance
+  - appointment
 
 
 # School program list
@@ -51,6 +57,24 @@ slots:
       - type: from_intent
         intent: old_student
         value: old
+
+  financial_inquiry:
+    type: any
+    mappings:
+      - type: from_text
+        intent: ask_financial
+
+  grade_inquiry:
+    type: any
+    mappings:
+      - type: from_text
+        intent: ask_grades
+
+  appointment_inquiry:
+    type: any
+    mappings:
+      - type: from_text
+        intent: ask_appointment
 
   program_option:
     type: any
@@ -85,13 +109,16 @@ actions:
   # Default fallback | human handoff
   - action_handoff_to_human
   - action_ask_handoff
-#  - action_enrollment_info
-#  - action_old_or_new
-#  - action_enrollment_info_response_old
-#  - action_enrollment_info_response_new
+  # Enrollment info | Admission
   - action_enrollment_info
   - action_enrollment_info_response
   - action_old_or_new
+  # Grades
+  - action_grades_info
+  # Financial
+  - action_financial_info
+  # Appointment
+  - action_appointment_info
 
 # CHECK ALL CAPITALIZATIONS, GRAMMARS, INDENTATIONS, AND PUNCTUATIONS
 # ALSO MAKE ALL RESPONSES AS DIRECT, CLEAR, AND SHORT AS POSSIBLE
@@ -100,10 +127,13 @@ actions:
 responses:
 # Conversation Starter
   utter_greet:
-  - text: "Hey! I am the HEDCen school chatbot! You can ask me anything school related.\n Other than that, I cannot answer any questions from the user. Thank You! "
+  - text: "Hey! I am the HEDCen school chatbot! You can ask me anything school related.\nOther than that, I cannot answer any questions from the user. Thank You! "
 
   utter_goodbye:
   - text: "You're welcome, Goodbye"
+
+  utter_welcome:
+  - text: "You're welcome! How's your experience? Anything you'd like to see added or improved? Your honest feedback helps me improve!"
 
 # SHS Strands
   utter_available_strand:
@@ -185,7 +215,6 @@ responses:
       The program is dedicated to empowering its participants with the skills and abilities necessary for excellence and has garnered local recognition within the football community for its sustained success.
       \nFor more information please visit our website: https://hedcen.education/"
 
-
 # Inclusive Program
   utter_details_program6:
     - text: "The school accepts the enrollment of children with learning disabilities and those who are academically or behaviorally challenged BUT are considered highly functional or educable.
@@ -197,8 +226,7 @@ responses:
     - text: "Pardon me, but the use of offensive language is not permitted here. \n
      We kindly request that you communicate respectfully and refrain from using profanity."
 
-
-# Sc  hool Info
+# School Contact Info
   utter_location:
     - text: "We are located at: 95 Beverly Hills Ave., Beverly Hills Subd. , Taytay, Philippines, 1920."
 
@@ -209,15 +237,9 @@ responses:
     - text: "Here's our email address: info@hedcen.education.\nFeel free to reach out to us there for any further assistance you may need."
 
   utter_contact_info:
-    - text: "Certainly! Here's our:\nEmail: info@hedcen.education\nContact Number: 0917 558 2968 "
+    - text: "Certainly! Here's our:\nEmail: info@hedcen.education\nContact Number: 0917 558 2968\nYou may also refer to this form: https://hedcen.education/contact-us/ "
 
-# Default Responses
-#  utter_default:
-#    - text: "I'm sorry I'm only a school chatbot and I'm not sure how to help with that. Can you try something else?"
-
-  utter_ask_handoff:
-    - text: "I'm sorry, I'm not sure how to help with that. Would you like me to transfer you to a human?"
-
+# Enrollment | Admission
   utter_grade_level:
     - text: "What grade level is the student in?"
 
@@ -245,6 +267,29 @@ responses:
   utter_new_shs:
     - text: "Please refer to our website to apply for an new student for the Senior High School level:\n https://hedcen.education/admissions/newstudents/senior-high-school/"
 
+# Default Fallback
+  utter_ask_handoff:
+    - text: "I'm sorry, I’m not sure I understand your message. It might be in Tagalog or it may not be school related."
+  utter_ask_handoff2:
+    - text: "Would you like me to transfer you to a human?"
+
+# Grades Default
+  utter_grades_info:
+    - text: "I'm sorry, I can't access any specific grade information."
+  utter_grades_info2:
+    - text: "I could refer you to N/A or would you like me to transfer you to a human?"
+
+# Financial Default
+  utter_financial_info:
+    - text: "I'm sorry, I am unable to access specific financial details such as school balances or tuition fees."
+  utter_financial_info2:
+    - text: "I could refer you to N/A or would you like me to transfer you to a human?"
+
+# Appointment Default
+  utter_appointment_info:
+    - text: "Unfortunately, I am unable to schedule appointments or provide appointment times."
+  utter_appointment_info2:
+    - text: "I could refer you to N/A or would you like me to transfer you to a human?"
 
 # add responses as sent by christian
 
