@@ -292,7 +292,18 @@ class ActionAppointmentInfo(Action):
         dispatcher.utter_message(response="utter_appointment_info2")
         return [SlotSet("appointment_inquiry", app)]
 
+#Feedback section
+class ActionHandleFeedback(Action):
 
+    def name(self) -> str:
+        return "action_handle_feedback"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker,
+            domain) -> list:
+        stars = tracker.get_slot("stars")
+
+        return []
 # This can be used when the user is given options:
 # class ActionArrayString(Action): 
 #     def name(self) -> Text:

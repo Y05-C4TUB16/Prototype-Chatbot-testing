@@ -36,6 +36,8 @@ intents:
   - ask_grades
   - ask_financial
   - ask_appointment
+  - give_feedback
+  - done
 
 entities:
   - strand
@@ -44,6 +46,7 @@ entities:
   - grade_info
   - finance
   - appointment
+  - stars
 
 
 # School program list
@@ -119,6 +122,8 @@ actions:
   - action_financial_info
   # Appointment
   - action_appointment_info
+  #Feedback
+  - action_handle_feedback
 
 # CHECK ALL CAPITALIZATIONS, GRAMMARS, INDENTATIONS, AND PUNCTUATIONS
 # ALSO MAKE ALL RESPONSES AS DIRECT, CLEAR, AND SHORT AS POSSIBLE
@@ -291,6 +296,23 @@ responses:
   utter_appointment_info2:
     - text: "I could refer you to N/A or would you like me to transfer you to a human?"
 
+#FEEDBACK
+  utter_quick_survey:
+    - text: "Before you go we would like to give you quick survey on your experience with our chatbot"
+      buttons:
+        - title: "1️⃣⭐"
+          payload: '/give_feedback{"stars": 1}'
+        - title: "2️⃣⭐⭐"
+          payload: '/give_feedback{"stars": 2}'
+        - title: "3️⃣⭐⭐⭐"
+          payload: '/give_feedback{"stars": 3}'
+        - title: "4️⃣⭐⭐⭐"
+          payload: '/give_feedback{"stars": 4}'
+        - title: "5️⃣⭐⭐⭐⭐⭐"
+          payload: '/give_feedback{"stars": 5}'
+
+  utter_thank_you:
+    - text: "We appreciate the time you spent with us and hope your feedback will help us enhance our chatbot. Have a great day!"
 # add responses as sent by christian
 
 

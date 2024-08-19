@@ -506,5 +506,29 @@ nlu:
     - can you schedule me an [appointment](appointment)?
     - where can I schedule an [appointment](appointment)?
     - can I schedule an [appointment](appointment) for
+    
+#Feedback
+- intent: give_feedback
+  examples: |
+    - I give it a {stars} star rating
+    - My rating is {stars} stars
+    - I would rate it {stars} stars
+    - {stars} stars
+    - I rate the experience {stars} stars
+    - I'd give it a {stars} star
+    - {stars}
+
+- intent: done
+  examples: |
+    - I'm done
+    - I'm finished
+    - That's all for now
+    - I think I'm done
+    - I'm satisfied
+    - I'm good now
+    - Finished
+    - Thank you, I'm done
+    - Thank you
+    - Thanks
 
 # add inquiries as sent by christian
