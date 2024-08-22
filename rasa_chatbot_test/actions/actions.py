@@ -302,8 +302,8 @@ class ActionHandleFeedback(Action):
             tracker,
             domain) -> list:
         stars = tracker.get_slot("stars")
-
         return []
+
 # This can be used when the user is given options:
 # class ActionArrayString(Action): 
 #     def name(self) -> Text:

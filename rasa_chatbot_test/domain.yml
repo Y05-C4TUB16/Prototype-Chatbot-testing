@@ -51,6 +51,14 @@ entities:
 
 # School program list
 slots:
+  #Feecback
+  stars:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: stars
+
   student_status:
     type: categorical
     mappings:
@@ -100,6 +108,7 @@ slots:
       - type: from_text
         intent: Inquire_details_program6
         role: program_option
+
 
 actions:
   - action_ask_strand
@@ -301,15 +310,15 @@ responses:
     - text: "Before you go we would like to give you quick survey on your experience with our chatbot"
       buttons:
         - title: "1️⃣⭐"
-          payload: '/give_feedback{"stars": 1}'
+          payload: 'stars'
         - title: "2️⃣⭐⭐"
-          payload: '/give_feedback{"stars": 2}'
+          payload: 'stars'
         - title: "3️⃣⭐⭐⭐"
-          payload: '/give_feedback{"stars": 3}'
+          payload: 'stars'
         - title: "4️⃣⭐⭐⭐"
-          payload: '/give_feedback{"stars": 4}'
+          payload: 'stars'
         - title: "5️⃣⭐⭐⭐⭐⭐"
-          payload: '/give_feedback{"stars": 5}'
+          payload: 'stars'
 
   utter_thank_you:
     - text: "We appreciate the time you spent with us and hope your feedback will help us enhance our chatbot. Have a great day!"
