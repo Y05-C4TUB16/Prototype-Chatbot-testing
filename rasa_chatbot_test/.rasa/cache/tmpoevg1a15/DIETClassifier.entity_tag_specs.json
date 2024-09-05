@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-appointment",
+      "2": "I-appointment",
+      "3": "L-appointment",
+      "4": "U-appointment",
+      "5": "B-enrollment_info",
+      "6": "I-enrollment_info",
+      "7": "L-enrollment_info",
+      "8": "U-enrollment_info",
+      "9": "B-finance",
+      "10": "I-finance",
+      "11": "L-finance",
+      "12": "U-finance",
+      "13": "B-grade_info",
+      "14": "I-grade_info",
+      "15": "L-grade_info",
+      "16": "U-grade_info",
+      "17": "B-strand",
+      "18": "I-strand",
+      "19": "L-strand",
+      "20": "U-strand",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-appointment": 1,
+      "I-appointment": 2,
+      "L-appointment": 3,
+      "U-appointment": 4,
+      "B-enrollment_info": 5,
+      "I-enrollment_info": 6,
+      "L-enrollment_info": 7,
+      "U-enrollment_info": 8,
+      "B-finance": 9,
+      "I-finance": 10,
+      "L-finance": 11,
+      "U-finance": 12,
+      "B-grade_info": 13,
+      "I-grade_info": 14,
+      "L-grade_info": 15,
+      "U-grade_info": 16,
+      "B-strand": 17,
+      "I-strand": 18,
+      "L-strand": 19,
+      "U-strand": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]
