@@ -309,16 +309,16 @@ responses:
   utter_quick_survey:
     - text: "Before you go we would like to give you quick survey on your experience with our chatbot"
       buttons:
-        - title: "1️⃣⭐"
+        - title: "Poor😟"
           payload: 'stars'
-        - title: "2️⃣⭐⭐"
+        - title: "Average👍⭐"
           payload: 'stars'
-        - title: "3️⃣⭐⭐⭐"
+        - title: "Excellent🏆⭐"
           payload: 'stars'
-        - title: "4️⃣⭐⭐⭐"
-          payload: 'stars'
-        - title: "5️⃣⭐⭐⭐⭐⭐"
-          payload: 'stars'
+#        - title: "4️⃣⭐⭐⭐"
+#          payload: 'stars'
+#        - title: "5️⃣⭐⭐⭐⭐⭐"
+#          payload: 'stars'
 
   utter_thank_you:
     - text: "We appreciate the time you spent with us and hope your feedback will help us enhance our chatbot. Have a great day!"
