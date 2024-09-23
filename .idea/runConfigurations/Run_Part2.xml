@@ -1,0 +1,19 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run-Part2" type="ShConfigurationType" singleton="false">
+    <option name="SCRIPT_TEXT" value="rasa run --credentials credentials.yml --enable-api" />
+    <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
+    <option name="SCRIPT_PATH" value="$PROJECT_DIR$/rasa_chatbot_test" />
+    <option name="SCRIPT_OPTIONS" value="rasa run credentials --credentials.yml --enable-api" />
+    <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="false" />
+    <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/rasa_chatbot_test" />
+    <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+    <option name="INTERPRETER_PATH" value="powershell.exe" />
+    <option name="INTERPRETER_OPTIONS" value="" />
+    <option name="EXECUTE_IN_TERMINAL" value="true" />
+    <option name="EXECUTE_SCRIPT_FILE" value="false" />
+    <envs />
+    <method v="2">
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="Run-The-Action" run_configuration_type="ShConfigurationType" />
+    </method>
+  </configuration>
+</component>
