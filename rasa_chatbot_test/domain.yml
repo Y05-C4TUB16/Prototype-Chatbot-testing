@@ -25,7 +25,6 @@ intents:
   - Inquire_program_option3
   - Inquire_program_option4
   - Inquire_program_option5
-  - Inquire_program_option6
   - ask_enrollment_info
   - educ_level
   - grade_level_eed
@@ -187,8 +186,8 @@ responses:
 #School Programs
   utter_list_program:
     - text: "The school offers a diverse range of programs to cater to different interests and needs:
-    \n1. Discovery and Play\n2. Senior Highschool\n3. Advanced Sciences\n4. IT Programs\n5. Sports Excellence
-    \n6. Inclusive Program\n"
+    \n1. Discovery and Play\n2. Advanced Sciences\n3. IT Programs\n4. Sports Excellence
+    \n5. Inclusive Program\n"
 
 
 # Users Ask programs:
@@ -201,16 +200,16 @@ responses:
 
 
 # Senior HighSchool
-  utter_details_program2:
-    - text: "Our Senior High School Program is designed to cultivate advanced skills and academic proficiency in young adults.
-     Through our immersive approach, students have the chance to receive close mentorship from experienced practitioners.
-     They will acquire advanced cognitive abilities such as critical thinking, analytical skills, and problem-solving,
-     enabling them to apply their knowledge effectively to drive positive change and achieve tangible outcomes.
-     \nFor more information please visit our website: https://hedcen.education/"
+#  utter_details_program2:
+#    - text: "Our Senior High School Program is designed to cultivate advanced skills and academic proficiency in young adults.
+#     Through our immersive approach, students have the chance to receive close mentorship from experienced practitioners.
+#     They will acquire advanced cognitive abilities such as critical thinking, analytical skills, and problem-solving,
+#     enabling them to apply their knowledge effectively to drive positive change and achieve tangible outcomes.
+#     \nFor more information please visit our website: https://hedcen.education/"
 
 
 #  Advanced Sciences
-  utter_details_program3:
+  utter_details_program2:
     - text: "HEDCen's Science Program begins with a single integrated Science subject in the primary levels.
     Starting from Grade 4, the sciences are taught as two separate subjects: Life Sciences and Physical Sciences.
     From Grades 5 to 10, the sciences are divided into four distinct subjects organized across two departments.
@@ -218,19 +217,19 @@ responses:
     \nFor more information please visit our website: https://hedcen.education/"
 
 #  IT Program
-  utter_details_program4:
+  utter_details_program3:
     - text: "HEDCen in partnership with iCarnegie Global Learning (powered by Carnegie Mellon University, a world leader in the field of Computer Science and Robotics) will empower children with skills in Information Technology through its internationally competitive IT curriculum in SY 2016-2017.
       HEDCen is presently 1 out of 3 schools in the Philippines to offer this program.
       \nFor more information please visit our website: https://hedcen.education/"
 
 # Sports Excellence
-  utter_details_program5:
+  utter_details_program4:
     - text: "Classes are held three periods per week. Additionally, the HEDCen Varsity Program is focused on cultivating not only kinesthetically inclined children but also any child demonstrating diligence and interest in sports participation.
       The program is dedicated to empowering its participants with the skills and abilities necessary for excellence and has garnered local recognition within the football community for its sustained success.
       \nFor more information please visit our website: https://hedcen.education/"
 
 # Inclusive Program
-  utter_details_program6:
+  utter_details_program5:
     - text: "The school accepts the enrollment of children with learning disabilities and those who are academically or behaviorally challenged BUT are considered highly functional or educable.
       HEDCen does NOT have a separate formal special education program but instead offers the regular school curriculum as its basis for special consideration as may be necessary.
       \nFor more information please visit our website: https://hedcen.education/."
@@ -311,9 +310,9 @@ responses:
       buttons:
         - title: "Poor😟"
           payload: 'stars'
-        - title: "Average👍⭐"
+        - title: "Average👍"
           payload: 'stars'
-        - title: "Excellent🏆⭐"
+        - title: "Excellent🏆"
           payload: 'stars'
 #        - title: "4️⃣⭐⭐⭐"
 #          payload: 'stars'

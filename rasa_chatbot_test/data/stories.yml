@@ -94,6 +94,15 @@ stories:
     - intent: goodbye
     - action: utter_goodbye
 
+#- story: Users ask about school programs2
+#  steps:
+#    - intent: greet
+#    - action: utter_greet
+#    - intent: Inquire_program_option2
+#    - action: utter_details_program2
+#    - intent: goodbye
+#    - action: utter_goodbye
+
 - story: Users ask about school programs2
   steps:
     - intent: greet
@@ -127,15 +136,6 @@ stories:
     - action: utter_greet
     - intent: Inquire_program_option5
     - action: utter_details_program5
-    - intent: goodbye
-    - action: utter_goodbye
-
-- story: Users ask about school programs6
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: Inquire_program_option6
-    - action: utter_details_program6
     - intent: goodbye
     - action: utter_goodbye
 #School Location
