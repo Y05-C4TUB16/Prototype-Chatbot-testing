@@ -73,8 +73,27 @@ stories:
     - intent: goodbye
     - action: utter_goodbye
 
- #School Program
+# School Hours
+- story: ask for School hours
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_school_hours
+    - action: utter_school_hours
+    - intent: goodbye
+    - action: utter_goodbye
 
+#School Name
+- story: ask for the meaning of the School
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_school_name
+    - action: utter_school_name
+    - intent: goodbye
+    - action: utter_goodbye
+
+ #School Program
 - story: User asks about the school program
   steps:
     - intent: greet
@@ -93,15 +112,6 @@ stories:
     - action: utter_details_program1
     - intent: goodbye
     - action: utter_goodbye
-
-#- story: Users ask about school programs2
-#  steps:
-#    - intent: greet
-#    - action: utter_greet
-#    - intent: Inquire_program_option2
-#    - action: utter_details_program2
-#    - intent: goodbye
-#    - action: utter_goodbye
 
 - story: Users ask about school programs2
   steps:

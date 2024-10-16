@@ -7,6 +7,10 @@ intents:
   - deny
   - thanks
   - complaint
+  #School hours
+  - ask_school_hours
+  #School name
+  - ask_school_name
   - ask_strand
   - inquire_strand1_lsr
   - inquire_strand2_ttd
@@ -110,6 +114,10 @@ slots:
 
 
 actions:
+  #School hours
+  - action_school_hours
+  #School Name
+  - action_school_name
   - action_ask_strand
   # Profanity
   - action_handle_swearing
@@ -140,7 +148,10 @@ actions:
 responses:
 # Conversation Starter
   utter_greet:
-  - text: "Hey! I am the HEDCen school chatbot! You can ask me anything school related.\nOther than that, I cannot answer any questions from the user. Thank You! "
+  - text: "Hi! I’m the HEDCen school chatbot, here to assist you with any school-related inquiries.
+  \nPlease note that I can only provide information on school topics and cannot respond to unrelated questions.
+  \nFor your safety, avoid sharing personal information.
+  \nAny data provided may be used to further improve this chatbot. Thank you!"
 
   utter_goodbye:
   - text: "You're welcome, Goodbye"
@@ -148,7 +159,13 @@ responses:
   utter_welcome:
   - text: "You're welcome! How's your experience? Anything you'd like to see added or improved? Your honest feedback helps me improve!"
 
-# SHS Strands
+  #School Name:
+  utter_school_name:
+    - text: "HEDCEN stands for Holistic Education and Development Center."
+  #School Hours
+  utter_school_hours:
+    - text: "Our school's business hours are Monday through Friday, from 7:30 AM to 4:15 PM.\nFor inquiries outside of business hours, please feel free to email us, and we will respond as soon as possible"
+  # SHS Strands
   utter_available_strand:
     - text: "Our SHS Program has six strands that students can choose from. The modules offered under these strands are open not only to HEDCen students but also
      to adults and other individuals as well. These may be taken as independent classes and will merit course certificate.\n1. Life Science and Research\n2. Teacher Training and Development

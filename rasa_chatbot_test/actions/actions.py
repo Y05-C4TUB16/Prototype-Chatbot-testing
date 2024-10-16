@@ -292,6 +292,32 @@ class ActionAppointmentInfo(Action):
         dispatcher.utter_message(response="utter_appointment_info2")
         return [SlotSet("appointment_inquiry", app)]
 
+# School Hours
+class ActionHandleSchoolHours(Action):
+    def name(self) -> str:
+        return "action_school_hours"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(response="utter_school_hours")
+        return []
+#School Name
+class ActionHandleSchoolName(Action):
+    def name(self) -> str:
+        return "action_school_name"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(response="utter_school_name")
+        return []
 #Feedback section
 class ActionHandleFeedback(Action):
 

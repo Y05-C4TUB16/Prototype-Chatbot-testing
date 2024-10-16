@@ -75,6 +75,16 @@ nlu:
     - salamat po 
     - salamat
     
+#School name
+- intent: ask_school_name
+  examples: |
+    - What does HEDCEN stand for?
+    - What is the school name?
+    - What is the meaning of HEDCEN?
+    - Can you tell me what HEDCEN means?
+    - What is HEDCEN short for?
+    - What does the acronym HEDCEN stand for?
+    - What is the full name of HEDCEN?
 
 - intent: complaint
   examples: |
@@ -216,23 +226,6 @@ nlu:
     - Option 1, which is Discovery and Play, interests me.
     - I want to know option 1
     - I want to know number 1
-
-#- intent: Inquire_program_option2
-#  examples: |
-#    - 2
-#    - number 2
-#    - What about option 2?
-#    - What are the details about Senior High School?
-#    - Can you tell me more about Senior High School?
-#    - I'm interested in option 2 (Senior High School).
-#    - Could you provide details on option 2 (Senior High School)?
-#    - Tell me about option 2 (Senior High School).
-#    - Please explain the second option (Senior High School).
-#    - I want to learn about Senior High School.
-#    - Could you give me information about Senior High School?
-#    - Describe Senior High School.
-#    - What can you tell me about option 2?
-#    - Option 2, which is Senior High School, interests me.
 
 - intent: Inquire_program_option2
   examples: |
@@ -516,7 +509,23 @@ nlu:
     - can you schedule me an [appointment](appointment)?
     - where can I schedule an [appointment](appointment)?
     - can I schedule an [appointment](appointment) for
-    
+
+#Bussiness Hours
+- intent: ask_school_hours
+  examples: |
+    - What time does the school open?
+    - When are you usually available?
+    - What are the business hours of the school?
+    - Can you tell me the school's opening hours?
+    - What time do you open?
+    - What time does the school close?
+    - What time is the school open?
+    - When can I visit the school?
+    - What time does the school operate?
+    - What time are you open until?
+    - What time do classes start?
+    - What time do the offices open?
+    - What time does the school open for students?
 #Feedback
 - intent: give_feedback
   examples: |
