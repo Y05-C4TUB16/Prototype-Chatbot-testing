@@ -41,6 +41,8 @@ intents:
   - ask_appointment
   - give_feedback
   - done
+# 26/10/24
+  - ask_school_schedule
 
 entities:
   - strand
@@ -50,6 +52,12 @@ entities:
   - finance
   - appointment
   - stars
+# User Ask Schedule (26/10/24)
+  - schedule
+# Thank you entity(26/10/24)
+  - Thank you
+# Profanity (26/10/24)
+  - profanity
 
 
 # School program list
@@ -157,7 +165,7 @@ responses:
   - text: "You're welcome, Goodbye"
 
   utter_welcome:
-  - text: "You're welcome! How's your experience? Anything you'd like to see added or improved? Your honest feedback helps me improve!"
+  - text: "You're welcome! Let me know if you need any further assistance or have more questions."
 
   #School Name:
   utter_school_name:
@@ -165,6 +173,7 @@ responses:
   #School Hours
   utter_school_hours:
     - text: "Our school's business hours are Monday through Friday, from 7:30 AM to 4:15 PM.\nFor inquiries outside of business hours, please feel free to email us, and we will respond as soon as possible"
+
   # SHS Strands
   utter_available_strand:
     - text: "Our SHS Program has six strands that students can choose from. The modules offered under these strands are open not only to HEDCen students but also
@@ -303,6 +312,12 @@ responses:
   utter_ask_handoff2:
     - text: "Would you like me to transfer you to a human?"
 
+#  utter_confirm_handoff:
+#    - text: "I am passing you to a human..."
+#
+#  utter_deny_handoff:
+#    - text: "Alright, let's continue."
+
 # Grades Default
   utter_grades_info:
     - text: "I'm sorry, I can't access any specific grade information."
@@ -331,15 +346,17 @@ responses:
           payload: 'stars'
         - title: "Excellent🏆"
           payload: 'stars'
-#        - title: "4️⃣⭐⭐⭐"
-#          payload: 'stars'
-#        - title: "5️⃣⭐⭐⭐⭐⭐"
-#          payload: 'stars'
+
 
   utter_thank_you:
-    - text: "We appreciate the time you spent with us and hope your feedback will help us enhance our chatbot. Have a great day!"
+    - text: "We appreciate the time you spent with us and hope your feedback will help us improve our chatbot. Have a great day!"
 # add responses as sent by christian
 
+#October 26, 2024
+
+#User asks School Schedule
+  utter_ask_school_schedule:
+    - text: "I am not allowed to disclose information about timetables, class schedules and classrooms. If that is your concern please wait for our Admin to reply."
 
 session_config:
   session_expiration_time: 60

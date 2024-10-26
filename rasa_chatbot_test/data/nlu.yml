@@ -55,6 +55,10 @@ nlu:
     - no way
     - not really
 
+#- synonyms:
+#  examples: |
+#    -
+
 - intent: thanks
   examples: |
     - ok thanks
@@ -156,38 +160,87 @@ nlu:
     - May I inquire about Contemporary Writing?
     - I would like to know more about Contemporary Writing
 
+## Profanity
+#- intent: swear
+#  examples: |
+#    - Oh **** (profanity)
+#    - This is so **** (profanity)
+#    - Stop that **** (profanity)
+#    - Why the **** are you not helping me (profanity)?
+#    - You're [useless] (profanity)
+#    - [F**k off] (profanity)
+#    - [Go to hell] (profanity)
+#    - Shut the [f*** up], you're not helping me (profanity)
+#    - I hate you
+#    - stfu
+#    - f u
+#    - i hate this [s**t] (profanity)
+#    - shut the [f*ck up] (profanity)
+#    - just shut the [f*ck up] pls (profanity)
+#    - [motherf**cker] (profanity)
+#    - [hoe] (profanity)
+#    - nigga(profanity)
+#    - n-word (profanity)
+#    - useless (profanity)
+#    - walang kwenta (profanity)
+#    - pota(profanity)
+#    - puta (profanity)
+#    - putang ina (profanity)
+#    - putang ina mo (profanity)
+#    - bobo (profanity)
+#    - ina mo (profanity)
+#    - inang yan (profanity)
+#
+#- synonym: profanity
+#  examples: |
+#    - fuck you
+#    - fuck
+#    - fuck up
+#    - shit
+#    - useless
+#    - mother fucker
+#    - Motherfucker
+
 # Profanity
 - intent: swear
   examples: |
-    - Oh ****
-    - This is so ****
-    - Stop that ****
-    - Why the **** are you not helping me?
-    - You're useless
-    - F**k off
-    - Go to hell
-    - Shut the f*** up, you're not helping me
+    - Oh [fuck](profanity)
+    - This is so [shit](profanity)
+    - Stop that [bitch](profanity)
+    - Why the [fuck](profanity) are you not helping me?
+    - You're [useless](profanity)
+    - [Fuck off](profanity)
+    - [Go to hell](profanity)
+    - Shut the [fuck up](profanity), you're not helping me
     - I hate you
     - stfu
     - f u
-    - i hate this s**t
-    - shut the f*ck up
-    - just shut the f*ck up pls
-    - motherf**cker
-    - mother f**cker
-    - hoe
-    - nigga
-    - n-word
-    - nword
+    - I hate this [shit](profanity)
+    - Shut the [fuck up](profanity)
+    - Just shut the [fuck up](profanity), pls
+    - [motherfucker](profanity)
+    - [hoe](profanity)
+    - [nigga](profanity)
+    - [n-word](profanity)
+    - [useless](profanity)
+    - [walang kwenta](profanity)
+    - [pota](profanity)
+    - [puta](profanity)
+    - [putang ina](profanity)
+    - [putang ina mo](profanity)
+    - [bobo](profanity)
+    - [ina mo](profanity)
+    - [inang yan](profanity)
+
+- synonym: profanity
+  examples: |
+    - fuck you
+    - fuck
+    - fuck up
+    - shit
     - useless
-    - walang kwenta
-    - pota
-    - puta
-    - putang ina
-    - putang ina mo
-    - bobo
-    - ina mo
-    - inang yan
+    - motherfucker
+
 
 # School program
 - lookup: program_option
@@ -537,17 +590,40 @@ nlu:
     - I'd give it a {stars} star
     - {stars}
 
+#updated the done
 - intent: done
   examples: |
-    - I'm done
-    - I'm finished
+    - [Thank you](Thank you)
+    - I'm done, [Thank you](Thank you)
+    - I'm finished [Thank you](Thank you)
     - That's all for now
     - I think I'm done
-    - I'm satisfied
-    - I'm good now
-    - Finished
-    - Thank you, I'm done
-    - Thank you
+    - I'm satisfied, [Thank you](Thank you)
+    - I'm good now [Thank you](Thank you)
+    - Finished [Thank you](Thank you)
+    - Thank you, I'm done [Thank you](Thank you)
+    - [Thanks](Thank you)
+
+- synonym: Thank you
+  examples: |
     - Thanks
+    - thanks
+    - Thank you
+
+#October 26, 2024:
+
+#User Asks School Schedules
+- intent: ask_school_schedule
+  examples: |
+    - Can you tell me what is my [schedule](schedule)?
+    - Can you tell me what is my [class schedule](schedule)?
+    - [schedule](schedule)
+    - [class schedule](schedule)
+
+- synonym: schedule
+  examples: |
+    - schedule
+    - class hours
+    - class schedule
 
 # add inquiries as sent by christian
