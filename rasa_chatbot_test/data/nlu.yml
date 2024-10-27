@@ -90,14 +90,14 @@ nlu:
     - What does the acronym HEDCEN stand for?
     - What is the full name of HEDCEN?
 
-- intent: complaint
-  examples: |
-    - why are you not helping me?
-    - why are you like this?
-    - this isn't helping
-    - this isnt helping
-    - this is not helping
-    
+#- intent: complaint
+#  examples: |
+#    - why are you not helping me?
+#    - why are you like this?
+#    - this isn't helping
+#    - this isnt helping
+#    - this is not helping
+#
     
 - intent: ask_strand
   examples: |
@@ -160,47 +160,6 @@ nlu:
     - May I inquire about Contemporary Writing?
     - I would like to know more about Contemporary Writing
 
-## Profanity
-#- intent: swear
-#  examples: |
-#    - Oh **** (profanity)
-#    - This is so **** (profanity)
-#    - Stop that **** (profanity)
-#    - Why the **** are you not helping me (profanity)?
-#    - You're [useless] (profanity)
-#    - [F**k off] (profanity)
-#    - [Go to hell] (profanity)
-#    - Shut the [f*** up], you're not helping me (profanity)
-#    - I hate you
-#    - stfu
-#    - f u
-#    - i hate this [s**t] (profanity)
-#    - shut the [f*ck up] (profanity)
-#    - just shut the [f*ck up] pls (profanity)
-#    - [motherf**cker] (profanity)
-#    - [hoe] (profanity)
-#    - nigga(profanity)
-#    - n-word (profanity)
-#    - useless (profanity)
-#    - walang kwenta (profanity)
-#    - pota(profanity)
-#    - puta (profanity)
-#    - putang ina (profanity)
-#    - putang ina mo (profanity)
-#    - bobo (profanity)
-#    - ina mo (profanity)
-#    - inang yan (profanity)
-#
-#- synonym: profanity
-#  examples: |
-#    - fuck you
-#    - fuck
-#    - fuck up
-#    - shit
-#    - useless
-#    - mother fucker
-#    - Motherfucker
-
 # Profanity
 - intent: swear
   examples: |
@@ -212,7 +171,6 @@ nlu:
     - [Fuck off](profanity)
     - [Go to hell](profanity)
     - Shut the [fuck up](profanity), you're not helping me
-    - I hate you
     - stfu
     - f u
     - I hate this [shit](profanity)
@@ -240,6 +198,7 @@ nlu:
     - shit
     - useless
     - motherfucker
+    - bitch
 
 
 # School program
@@ -626,4 +585,186 @@ nlu:
     - class hours
     - class schedule
 
-# add inquiries as sent by christian
+#October 27, 2024:
+
+#User Apologizing on Profanity
+- intent: user_apologize
+  examples: |
+    - I'm [sorry](apology)
+    - [Forgive](apology) me
+    - I [didn't mean](apology) to say those words
+    - I [didn't mean](apology) it
+
+- synonym: apology
+  examples: |
+    - sorry
+    - I'm sorry
+    - didn't mean 
+    - my mistake
+    - Forgive me
+
+# User Frustrated on the chatbot unable to answer some questions.
+- intent: user_frustrated
+  examples: |
+    - Your [not helping](frustrated) me
+    - You [didn't answer](frustrated) my questions
+    - This [doesn't answer](frustrated) my questions
+    - This [does not answer](frustrated) my questions 
+    - You're not helping me, [I hate you](frustrated)
+    - This is so [frustrating](frustrated)!
+    - I don't like this at all
+    - You're [not giving me](frustrated) what I need
+    - You're [not helping me](frustrated)
+    - This isn't what I've said
+    - I feel like I'm [getting nowhere](frustrated)
+    - That’s not what I’m asking
+    - That is not what I am inquiring about
+    - this is not helping
+    - why are you not helping me?
+
+- synonym: frustrated
+  examples: |
+    - I hate you
+    - not helping
+    - frustrating
+    - getting nowhere
+    - not giving me
+    - didn't answer
+    - does not answer
+    - doesn't answer
+
+#<------------ FAQS SECTION ONLINE EDUCATION QUESTIONS ------------------------>
+
+#1. Homeschooling
+- intent: user_asks_homeschooling
+  examples: |
+    - How is HEDCen’s program different from [home schooling](homeschooling)?
+    - What is [home schooling program](homeschooling)?
+    - Can you tell me about your [home schooling](homeschooling)
+    - What can you tell me about your [home schooling](homeschooling)
+    - I wanna know about your [home schooling](homeschooling)
+    - How does your [homes schooling program](homeschooling) works?
+
+- synonym: homeschooling
+  examples: |
+    - homeschooling
+    - homeschooling program
+
+#2. Online Program
+- intent: user_asks_online-program
+  examples: |
+    - What changes come with the school’s way of translating its program into an [online program](online-learning)?
+    - In what ways does the [online learning](online-learning) differ from traditional classroom?
+    - How does the school ensure that the [online learning](online-learning) maintains educational quality?
+    - Can you tell about your [online learning](online-learning)
+    - How does your [online learning](online-learning) works?
+
+- synonym: online-learning
+  examples: |
+    - online learning
+    - online program
+
+#3. Experiential Learning
+- intent: user_asks_experiential-learning
+  examples: |
+    - What happens to HEDCen’s [experiential learning](experiential-learning)?
+    - What is HEDCen’s [experiential learning](experiential-learning)?
+    - How does HEDCen’s [experiential learning](experiential-learning) works?
+    - Can you tell me about your [experiential learning](experiential-learning)?
+
+- synonym: experiential-learning
+  examples: |
+    - experiential learning
+#4. Transferees
+- intent: user_asks_transferees
+  examples: |
+    - How can the school help [transferees](transferees) adjust to the HEDCen way of life given the change in the delivery of lessons?
+    - What can you do for [transferees](transferees) students?
+    - What to do if I am a [transferred](transferees) student?
+    - I am [transferred](transferees) student, can you help me?
+    - I am [new](transferees) to this school 
+
+- synonym: transferees
+  examples: |
+    - transferees
+    - transferee
+    - transferred
+    - new
+#5. Children Screen Time
+- intent: user_asks_children-screentime
+  examples: |
+    - How much [screen time](screen-time) should I expect my child to have?
+    - How much [screen time](screen-time) can I expect my child to have during their lessons?
+
+- synonym: screen-time
+  examples: |
+    - screen time
+
+#6. Children with Special Needs
+- intent: user_ask_special-needs
+  examples: |
+    - Will you continue to accept children with [special needs](special) on online program?
+    - Do you accept children with [special needs](special) on online learning?
+    - Are children with [special needs](special) allowed to enroll here on online learning
+    - Does the school offer support for children with [special needs](special) in online learning?
+    - Will you keep providing online programs for [special needs](special) students?
+    - Is this school inclusive of children with [special needs](special)?
+
+- synonym: special
+  examples: |
+    - special needs
+
+#7. Online program Scale
+- intent: user_asks_online-learning-scale
+  examples: |
+    - Is your online program available to students [outside](range) of the Province of Rizal?
+    - Is the online program open to students who live [outside](range) Rizal?
+    - Are students [outside](range) the Province of Rizal eligible for your online program?
+    - Is it possible for students [outside](range) Rizal to participate in the online program?
+
+- synonym: range
+  examples: |
+    - outside
+
+#8. Remotely Guidance and Counseling
+- intent: user_asks_guidance-counseling
+  examples: |
+    - Will [guidance](student_service) and [counseling](student_service) services be available remotely for the students?
+    - Are [guidance](student_service) and [counseling](student_service) services available online for students?
+    - Will students be able to receive [guidance](student_service) and [counseling](student_service) support online?
+    - Is remote access to [guidance](student_service) and [counseling](student_service) offered for students?
+
+- synonym: student_service
+  examples: |
+    - guidance
+    - counseling
+#9. Orientation for students and Parents
+- intent: user_asks_orientation
+  examples: |
+    - Will there be an [orientation](orientation) for parents and students before we begin with online learning?
+    - Is there an [orientation](orientation) planned to help us get started with online classes?
+    - Is there a [meeting](orientation) scheduled for parents and students about the online learning process?
+    - Will the school hold an student and parents [orientation](orientation) for the online learning?
+
+- synonym: orientation
+  examples: |
+    - orientation
+    - meeting
+    - orientation
+#10. Required specifications of the gadget needed in the Computer Science Class
+- intent: user_asks_computer-specs
+  examples: |
+    - For students from Grades 1 to 10, what would be the required minimum [specifications](specs) of the [gadget](specs) needed in the computer science class?
+    - What are the minimum [specs](specs) needed for online learning?
+    - What device [requirements](specs) do parents need to prepare for online classes?
+    - Does the school provide a list of [gadget](specs) specifications for each grade level?
+    - What are the minimum [specifications](specs) for a [laptop](specs) needed for online learning?
+    - What are the minimum [specifications](specs) for a [computer](specs) needed for online learning?
+
+- synonym: specs
+  examples: |
+    - specification
+    - specs
+    - gadgets
+    - laptop
+    - computer

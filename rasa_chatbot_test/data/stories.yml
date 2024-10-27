@@ -369,7 +369,7 @@ stories:
     - action: action_handle_feedback
     - action: utter_thank_you
 
-#October 25, 2024:
+#October 26, 2024:
 
 #User Ask Schedules
 - story: User asks school schedules
@@ -378,4 +378,72 @@ stories:
     - action: utter_greet
     - intent: ask_school_schedule
     - action: utter_ask_school_schedule
+
+#October 27, 2024:
+# User Apologizing to the chatbot for Profanity
+- story: User apologizes to the chatbot due to profanity
+  steps:
+    - intent: user_apologize
+    - action: utter_apology_accepted
+
+# User is frustrated to the Chatbot
+- story: User expresses frustration
+  steps:
+    - intent: user_frustrated
+    - action: utter_user_frustration
+
+#FAQS SECTION ONLINE EDUCATION QUESTIONS
+
+#1. Homeschooling
+- story: User asks for homeschooling program
+  steps:
+    - intent: user_asks_homeschooling
+    - action: utter_homeschooling
+
+#2. Online Program
+- story: User asks for Online program or Online Learning program
+  steps:
+    - intent: user_asks_online-program
+    - action: utter_online-program
+
+#3. Experiential Learning
+- story: User asks about Experiential Learning
+  steps:
+    - intent: user_asks_experiential-learning
+    - action: utter_experiential-learning
+#4. Transferees
+- story: User asks about transferees
+  steps:
+    - intent: user_asks_transferees
+    - action: utter_transferees
+#5. Children Screen Time
+- story: User asks about children's screen time
+  steps:
+    - intent: user_asks_children-screentime
+    - action: utter_children-screentime
+#6. Children with Special Needs
+- story: User asks about children's special needs
+  steps:
+    - intent: user_ask_special-needs
+    - action: utter_children-special
+#7. Online program Scale
+- story: User asks about online learning location scale
+  steps:
+    - intent: user_asks_online-learning-scale
+    - action: utter_online-learning-scale
+#8. Remotely Guidance and Counseling
+- story: User asks about student guidance and counseling
+  steps:
+    - intent: user_asks_guidance-counseling
+    - action: utter_guidance-counseling
+#9. Orientation for students and Parents
+- story: User asks about student and parents orientation
+  steps:
+    - intent: user_asks_orientation
+    - action: utter_orientation
+#10. Required specifications of the gadget needed in the Computer Science Class
+- story: User asks computer specification for computer science
+  steps:
+    - intent: user_asks_computer-specs
+    - action: utter_computer-specs
 # add stories, check nlu

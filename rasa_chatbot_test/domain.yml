@@ -43,6 +43,30 @@ intents:
   - done
 # 26/10/24
   - ask_school_schedule
+# 27/10/24
+  - user_apologize
+  - user_frustrated
+#<----FAQS INTENTS---->
+# 1.Homeschooling
+  - user_asks_homeschooling
+#2. Online Program
+  - user_asks_online-program
+#3. Experiential Learning
+  - user_asks_experiential-learning
+#4. Transferees
+  - user_asks_transferees
+#5. Children Screen Time
+  - user_asks_children-screentime
+#6. Children with Special Needs
+  - user_ask_special-needs
+#7. Online program Scale
+  - user_asks_online-learning-scale
+#8. Remotely Guidance and Counseling
+  - user_asks_guidance-counseling
+#9. Orientation for students and Parents
+  - user_asks_orientation
+#10. Required specifications of the gadget needed in the Computer Science Class
+  - utter_asks_computer-specs
 
 entities:
   - strand
@@ -58,7 +82,30 @@ entities:
   - Thank you
 # Profanity (26/10/24)
   - profanity
-
+# User apologizes on Profanity (27/10/24)
+  - apology
+# User frustrated
+  - frustrated
+# Homeschooling
+  - homeschooling
+#Online Program
+  - online-learning
+#Experiential Learning
+  - experiential-learning
+#Transferees
+  - transferees
+#Children Screen Time
+  - screen-time
+#Children with Special Needs
+  - special
+#Online program Scale
+  - range
+#Remotely Guidance and Counseling
+  - student_service
+#Orientation for students and Parents
+  - orientation
+#Required specifications of the gadget needed in the Computer Science Class
+  - specs
 
 # School program list
 slots:
@@ -156,10 +203,13 @@ actions:
 responses:
 # Conversation Starter
   utter_greet:
-  - text: "Hi! I’m the HEDCen school chatbot, here to assist you with any school-related inquiries.
-  \nPlease note that I can only provide information on school topics and cannot respond to unrelated questions.
-  \nFor your safety, avoid sharing personal information.
-  \nAny data provided may be used to further improve this chatbot. Thank you!"
+  - text: "Hello there 👋😀, I am the HEDCen school chatbot, designed to assist you with any inquiries related to school matters. 
+  Please be advised that my capabilities are limited to addressing questions pertaining to school-related topics, 
+  and I am unable to respond to inquiries outside of this scope. Additionally, I only comprehend English😁.
+  \n
+  \n ⚠ For your safety, please refrain from sharing any personal information. 
+  Your feedback is invaluable and will contribute to the continuous improvement of this service."
+
 
   utter_goodbye:
   - text: "You're welcome, Goodbye"
@@ -308,7 +358,7 @@ responses:
 
 # Default Fallback
   utter_ask_handoff:
-    - text: "I'm sorry, I’m not sure I understand your message. It might be in Tagalog or it may not be school related."
+    - text: "I apologize😕, but I am having difficulty understanding your message🧐. It may be in Tagalog, or it might not pertain to school-related topics."
   utter_ask_handoff2:
     - text: "Would you like me to transfer you to a human?"
 
@@ -356,7 +406,92 @@ responses:
 
 #User asks School Schedule
   utter_ask_school_schedule:
-    - text: "I am not allowed to disclose information about timetables, class schedules and classrooms. If that is your concern please wait for our Admin to reply."
+    - text: "I am unable to disclose information regarding timetables, class schedules, and classroom assignments. For assistance with these matters, please await a response from Administration."
+
+#October 27, 2024
+
+#User Apologizes on Profanity
+  utter_apology_accepted:
+    - text: "Thank you for your apology🙏. I understand that frustrations can arise. I'm here to assist you, so please let me know how I can help you today."
+
+#User is frustrated to the Chatbot
+  utter_user_frustration:
+    - text: "I sincerely apologize for any frustration you may be experiencing😔. Your satisfaction is important to me, and I am here to assist you. Please provide more details about your concerns, and I will do my utmost to help."
+
+#<-------------FAQS SECTION------------->
+
+#ONLINE EDUCATION QUESTIONS
+
+#1. Homeschooling
+  utter_homeschooling:
+    - text: "Unlike homeschooling, where the parent is the primary teacher, HEDCen’s online program provides experienced and trained teachers to facilitate your child's learning. The program offers a structured daily routine and exposes students to a variety of challenging topics that foster critical thinking, creativity, logical reasoning, and a love for learning.
+            Each child will be assigned a mentor, who serves as their personal Teacher-in-charge. 
+            This mentor will communicate HEDCen values, recognize and nurture the child's unique intelligence, 
+            provide feedback, and support their overall development throughout the academic year."
+
+#2. Online Program
+  utter_online-program:
+    - text: "HEDCen’s online learning model aims to integrate best teaching practices while accommodating the unique needs of each learner. 
+            The primary approach utilized will be Discovery-Based Learning.
+            \n
+            \nThis method employs engaging topics to connect knowledge, concepts, and skills, fostering curiosity and encouraging students to learn. Discovery topics encompass areas of interest such as Science, World Studies, History, Literature, Humanities, and the Arts.
+             The thematic approach facilitates the integration of various subject areas related to the selected discovery topic for the week, serving as a foundation for deeper, practical, and immersive learning experiences.
+            \n
+            \nAside from this, a portion of the trimester shall also be devoted to learning concepts across the different subject areas that may not necessarily be encountered during discovery time."
+
+#3. Experiential Learning
+  utter_experiential-learning:
+    - text: "Discovery-based learning allows for experiential learning while recognizing the limitations set by online education.  Teachers are not entirely prevented from conducting simulations online or facilitating simple experiments for the child to do at home.
+     We shall continue to provide experience-based lessons as we see fit."
+#4. Transferees
+  utter_transferees:
+    - text: "All students, both returning and new, are expected to undergo a period of adjustment as the school transitions to online learning for the first trimester. The school will provide guidelines for both parents and students to assist in establishing a new routine at home. 
+    The mentor assigned to each student will monitor the child's adaptation to these changes and, in collaboration with the school administration, may offer appropriate recommendations to the student and/or their parents."
+#5. Children Screen Time
+  utter_children-screentime:
+    - text: "This varies across the different grade levels.
+            \n
+            \nFor EED, Grades 2 and 3 - Lessons are to be 15 to 20 minutes per subject.  Cumulative class hours shall be from 2.5 to 3 hours per day. The remaining hours are allotted for individual work and self-learning.
+            \n
+            \nFor Grade 4 to 6 - Lessons are to be 30 minutes per subject.  Cumulative class hours are 4 to 4.5 hours per day.  The remaining hours are allotted for individual work and self-learning.
+            \n
+            \nFor JHS and  SHS -  Students in JHS and SHS are to have 45 minutes of screen time per subject, with about 5 to 6 subjects per day.  SHS may have double periods for a subject if it shall help facilitate the delivery of lessons in an efficient manner."
+
+#6. Children with Special Needs
+  utter_children-special:
+    - text: "For children with special needs, enrollment may proceed if the school determines that the current online setup will be beneficial to the child."
+
+#7. Online program Scale
+  utter_online-learning-scale:
+    - text: "Yes. For as long as students have access to the internet, they may be part of our online program wherever they may be. "
+
+#8. Remotely Guidance and Counseling
+  utter_guidance-counseling:
+    - text: "Yes, this will be conducted by appointment, in accordance with the practices established by the school last year."
+
+#9. Orientation for students and Parents
+  utter_orientation:
+    - text: "Yes, the school will provide an online orientation along with guidelines to assist parents and students in adapting to the online setup. 
+    The orientation schedule will be announced at a later date on the school’s official Facebook page."
+
+#10. Required specifications of the gadget needed in the Computer Science Class
+  utter_computer-specs:
+    - text: "A desktop or a laptop may be used for computer science classes.
+    \n
+    \n👨‍💻For desktops:
+    \n1. The processor should have a frequency of 2.5GHz and at least dual-core or quad-core.
+    \n2. The RAM should at least be 4GB.
+    \n3. There should be a  2GB or 4GB video card.
+    \n4. It should have a webcam, microphone, and speaker.
+    \n
+    \n💻For Laptops:
+    \n1. The processor should have a frequency of 2.5GHz and at least dual-core or quad-core. 
+    \n2. The RAM should at least be 4GB. 
+    \n3. There should be a  2GB or 4GB video card.
+    \n
+    \nComputers running on both Windows and Macintosh operating systems manufactured in 2015 and later versions should suffice.
+      As for tablets and smartphones, though these may be useful in the general online classes, 
+      the software used in our computer science subject is not usually compatible with the said devices."
 
 session_config:
   session_expiration_time: 60
