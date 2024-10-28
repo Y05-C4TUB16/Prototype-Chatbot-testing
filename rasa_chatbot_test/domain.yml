@@ -203,11 +203,11 @@ actions:
 responses:
 # Conversation Starter
   utter_greet:
-  - text: "Hello there 👋😀, I am the HEDCen school chatbot, designed to assist you with any inquiries related to school matters. 
+  - text: "Hello there, I am the HEDCen school chatbot, designed to assist you with any inquiries related to school matters. 
   Please be advised that my capabilities are limited to addressing questions pertaining to school-related topics, 
-  and I am unable to respond to inquiries outside of this scope. Additionally, I only comprehend English😁.
+  and I am unable to respond to inquiries outside of this scope. Additionally, I only comprehend English.
   \n
-  \n ⚠ For your safety, please refrain from sharing any personal information. 
+  \nFor your safety, please refrain from sharing any personal information. 
   Your feedback is invaluable and will contribute to the continuous improvement of this service."
 
 
@@ -358,7 +358,7 @@ responses:
 
 # Default Fallback
   utter_ask_handoff:
-    - text: "I apologize😕, but I am having difficulty understanding your message🧐. It may be in Tagalog, or it might not pertain to school-related topics."
+    - text: "I apologize, but I am having difficulty understanding your message. It may be in Tagalog, or it might not pertain to school-related topics."
   utter_ask_handoff2:
     - text: "Would you like me to transfer you to a human?"
 
@@ -412,11 +412,11 @@ responses:
 
 #User Apologizes on Profanity
   utter_apology_accepted:
-    - text: "Thank you for your apology🙏. I understand that frustrations can arise. I'm here to assist you, so please let me know how I can help you today."
+    - text: "Thank you for your apology. I understand that frustrations can arise. I'm here to assist you, so please let me know how I can help you today."
 
 #User is frustrated to the Chatbot
   utter_user_frustration:
-    - text: "I sincerely apologize for any frustration you may be experiencing😔. Your satisfaction is important to me, and I am here to assist you. Please provide more details about your concerns, and I will do my utmost to help."
+    - text: "I sincerely apologize for any frustration you may be experiencing. Your satisfaction is important to me, and I am here to assist you. Please provide more details about your concerns, and I will do my utmost to help."
 
 #<-------------FAQS SECTION------------->
 
@@ -478,13 +478,13 @@ responses:
   utter_computer-specs:
     - text: "A desktop or a laptop may be used for computer science classes.
     \n
-    \n👨‍💻For desktops:
+    \nFor desktops:
     \n1. The processor should have a frequency of 2.5GHz and at least dual-core or quad-core.
     \n2. The RAM should at least be 4GB.
     \n3. There should be a  2GB or 4GB video card.
     \n4. It should have a webcam, microphone, and speaker.
     \n
-    \n💻For Laptops:
+    \nFor Laptops:
     \n1. The processor should have a frequency of 2.5GHz and at least dual-core or quad-core. 
     \n2. The RAM should at least be 4GB. 
     \n3. There should be a  2GB or 4GB video card.

@@ -675,6 +675,7 @@ nlu:
 - synonym: experiential-learning
   examples: |
     - experiential learning
+
 #4. Transferees
 - intent: user_asks_transferees
   examples: |
@@ -695,10 +696,18 @@ nlu:
   examples: |
     - How much [screen time](screen-time) should I expect my child to have?
     - How much [screen time](screen-time) can I expect my child to have during their lessons?
+    - Is there a [limit](screen-time) to screen time during lessons?
+    - How much [screen time](screen-time) does my son will have?
+    - How much [screen time](screen-time) does my daughter will have?
+    - How much [screen time](screen-time) would my child would have?
+    - How do you monitor [screen time](screen-time) during lessons?
+    - What’s the average [screen time](screen-time) for each grade?
+    - Does each subject involve [screen time](screen-time)?
 
 - synonym: screen-time
   examples: |
     - screen time
+    - limit
 
 #6. Children with Special Needs
 - intent: user_ask_special-needs
@@ -738,6 +747,7 @@ nlu:
   examples: |
     - guidance
     - counseling
+
 #9. Orientation for students and Parents
 - intent: user_asks_orientation
   examples: |
@@ -751,6 +761,7 @@ nlu:
     - orientation
     - meeting
     - orientation
+
 #10. Required specifications of the gadget needed in the Computer Science Class
 - intent: user_asks_computer-specs
   examples: |
