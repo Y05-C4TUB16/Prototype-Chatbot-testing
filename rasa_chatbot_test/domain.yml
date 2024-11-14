@@ -67,6 +67,8 @@ intents:
   - user_asks_orientation
 #10. Required specifications of the gadget needed in the Computer Science Class
   - utter_asks_computer-specs
+#14/11/2024: User in distressed for help
+  - user_ask_help
 
 entities:
   - strand
@@ -106,6 +108,8 @@ entities:
   - orientation
 #Required specifications of the gadget needed in the Computer Science Class
   - specs
+# 14/11/2024: Help assistance
+  - user_ask_help
 
 # School program list
 slots:
@@ -364,9 +368,11 @@ responses:
 
 # Default Fallback
   utter_ask_handoff:
-    - text: "I apologize, but I am having difficulty understanding your message. It may be in Tagalog, or it might not pertain to school-related topics."
+    - text: "I’m sorry, but could you please repeat your question? It seems like it might not relate to school-related topics."
   utter_ask_handoff2:
-    - text: "Would you like me to transfer you to a human?"
+    - text: "Would you like me to transfer you to a human? 
+    \n
+     \nIf you don't want to be handoff to a human then please let's continue"
 
 #  utter_confirm_handoff:
 #    - text: "I am passing you to a human..."
@@ -498,6 +504,10 @@ responses:
     \nComputers running on both Windows and Macintosh operating systems manufactured in 2015 and later versions should suffice.
       As for tablets and smartphones, though these may be useful in the general online classes, 
       the software used in our computer science subject is not usually compatible with the said devices."
+
+# 14/11/2024: Help assistance
+  utter_provide_help:
+    - text: "Of course! I'm here to help, just let me know what you need assistance with, and I'll do my best to support you."
 
 session_config:
   session_expiration_time: 60

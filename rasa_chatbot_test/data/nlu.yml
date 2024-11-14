@@ -830,3 +830,25 @@ nlu:
     - gadgets
     - laptop
     - computer
+
+  # 14/11/2024: Help assistance
+- intent: user_ask_help
+  examples: |
+    - Can you please [help](assistance) me?
+    - I need some [help](assistance)
+    - Could you [assist](assistance) me?
+    - I need [assistance](assistance)
+    - Can you [help](assistance)?
+    - Please [help](assistance) me
+    - please [help](assistance) me
+    - i need [help](assistance)
+    - can you please [help](assistance) me
+    - I need some [assistance](assistance)
+    - can you [assist](assistance) me?
+    - would you care to [help](assistance) me?
+
+- synonym: assistance
+  examples: |
+    - help
+    - assist
+    - assistance

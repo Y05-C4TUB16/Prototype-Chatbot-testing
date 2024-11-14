@@ -477,4 +477,10 @@ stories:
   steps:
     - intent: user_asks_computer-specs
     - action: utter_computer-specs
+
+- story: Respond to help request
+  steps:
+    - intent: user_ask_help
+    - action: utter_provide_help
+
 # add stories, check nlu
