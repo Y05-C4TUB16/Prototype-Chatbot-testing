@@ -109,6 +109,10 @@ entities:
 
 # School program list
 slots:
+  translated_input:
+    type: text
+    mappings: []
+
   #Feecback
   stars:
     type: float
@@ -169,6 +173,8 @@ slots:
 
 
 actions:
+  #translate to tagalog
+  - action_translate_tagalog_input
   #School hours
   - action_school_hours
   #School Name

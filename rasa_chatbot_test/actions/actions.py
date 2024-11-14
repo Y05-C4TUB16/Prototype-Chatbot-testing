@@ -4,6 +4,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import UserUtteranceReverted, ConversationPaused
 from rasa_sdk.events import SlotSet
+from googletrans import Translator
 
 
 class ActionAskStrand(Action):
@@ -329,6 +330,26 @@ class ActionHandleFeedback(Action):
             domain) -> list:
         stars = tracker.get_slot("stars")
         return []
+
+
+
+class ActionTranslateTagalogInput(Action):
+    def name(self) -> str:
+        return "action_translate_tagalog_input"
+
+    def run(self, dispatcher, tracker, domain):
+        # Get the user's message (input) in Tagalog
+        user_message = tracker.latest_message.get('text')
+
+        # Initialize the translator
+        translator = Translator()
+
+        # Translate the message from Tagalog to English
+        translated = translator.translate(user_message, src='tl', dest='en')
+        translated_text = translated.text
+
+        # Return the translated message for further processing
+        return [SlotSet("translated_input", translated_text)]
 
 # This can be used when the user is given options:
 # class ActionArrayString(Action): 

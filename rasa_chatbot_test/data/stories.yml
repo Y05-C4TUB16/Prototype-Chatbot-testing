@@ -5,7 +5,10 @@ stories:
 - story: happy path
   steps:
   - intent: greet
+ 
   - action: utter_greet
+
+
 
 - story: ask for SHS program strand 1
   steps:
@@ -21,6 +24,7 @@ stories:
 - story: ask for SHS program strand 2
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: ask_strand
     - action: utter_available_strand
@@ -32,6 +36,7 @@ stories:
 - story: ask for SHS program strand
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: ask_strand
     - action: utter_available_strand
@@ -43,6 +48,7 @@ stories:
 - story: ask for SHS program strand
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: ask_strand
     - action: utter_available_strand
@@ -54,6 +60,7 @@ stories:
 - story: ask for SHS program strand
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: ask_strand
     - action: utter_available_strand
@@ -65,6 +72,7 @@ stories:
 - story: ask for SHS program strand
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: ask_strand
     - action: utter_available_strand
@@ -77,6 +85,7 @@ stories:
 - story: ask for School hours
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: ask_school_hours
     - action: utter_school_hours
@@ -107,6 +116,7 @@ stories:
 - story: Users ask about school programs1
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: Inquire_program_option1
     - action: utter_details_program1
@@ -116,6 +126,7 @@ stories:
 - story: Users ask about school programs2
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: Inquire_program_option2
     - action: utter_details_program2
@@ -125,6 +136,7 @@ stories:
 - story: Users ask about school programs3
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: Inquire_program_option3
     - action: utter_details_program3
@@ -134,6 +146,7 @@ stories:
 - story: Users ask about school programs4
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: Inquire_program_option4
     - action: utter_details_program4
@@ -143,6 +156,7 @@ stories:
 - story: Users ask about school programs5
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: Inquire_program_option5
     - action: utter_details_program5
@@ -152,6 +166,7 @@ stories:
 - story: ask location
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: ask_location
     - action: utter_location
@@ -166,6 +181,7 @@ stories:
 - story: ask phone number #if landline is available, add landline
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: ask_contact_num
     - action: utter_phone_num
@@ -180,6 +196,7 @@ stories:
 - story: ask email
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: ask_email
     - action: utter_email
@@ -194,6 +211,7 @@ stories:
 - story: ask contact info #email and number
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: ask_contact_info
     - action: utter_contact_info
@@ -218,6 +236,7 @@ stories:
 - story: Enrollment info for old EED students
   steps:
   - intent: greet
+ 
   - action: utter_greet
   - intent: ask_enrollment_info
   - action: action_enrollment_info
@@ -233,6 +252,7 @@ stories:
 - story: Enrollment info for old GS and junior students
   steps:
   - intent: greet
+ 
   - action: utter_greet
   - intent: ask_enrollment_info
   - action: action_enrollment_info
@@ -248,6 +268,7 @@ stories:
 - story: Enrollment info for old senior students
   steps:
   - intent: greet
+ 
   - action: utter_greet
   - intent: ask_enrollment_info
   - action: action_enrollment_info
@@ -263,6 +284,7 @@ stories:
 - story: Enrollment info for new EED students
   steps:
   - intent: greet
+ 
   - action: utter_greet
   - intent: ask_enrollment_info
   - action: action_enrollment_info
@@ -278,6 +300,7 @@ stories:
 - story: Enrollment info for new GS and junior students
   steps:
   - intent: greet
+ 
   - action: utter_greet
   - intent: ask_enrollment_info
   - action: action_enrollment_info
@@ -293,6 +316,7 @@ stories:
 - story: Enrollment info for new senior students
   steps:
   - intent: greet
+ 
   - action: utter_greet
   - intent: ask_enrollment_info
   - action: action_enrollment_info
@@ -309,6 +333,7 @@ stories:
 - story: Ask about grades affirm
   steps:
   - intent: greet
+ 
   - action: utter_greet
   - intent: ask_grades
   - action: action_grades_info
@@ -318,6 +343,7 @@ stories:
 - story: Ask about grades deny
   steps:
   - intent: greet
+ 
   - action: utter_greet
   - intent: ask_grades
   - action: action_grades_info
@@ -327,6 +353,7 @@ stories:
 - story: Ask about financial info affirm
   steps:
   - intent: greet
+ 
   - action: utter_greet
   - intent: ask_financial
   - action: action_financial_info
@@ -336,6 +363,7 @@ stories:
 - story: Ask about financial info deny
   steps:
   - intent: greet
+ 
   - action: utter_greet
   - intent: ask_financial
   - action: action_financial_info
@@ -345,6 +373,7 @@ stories:
 - story: Ask about appointment affirm
   steps:
   - intent: greet
+ 
   - action: utter_greet
   - intent: ask_appointment
   - action: action_appointment_info
@@ -354,6 +383,7 @@ stories:
 - story: Ask about appointment info deny
   steps:
   - intent: greet
+ 
   - action: utter_greet
   - intent: ask_appointment
   - action: action_appointment_info
@@ -375,6 +405,7 @@ stories:
 - story: User asks school schedules
   steps:
     - intent: greet
+   
     - action: utter_greet
     - intent: ask_school_schedule
     - action: utter_ask_school_schedule

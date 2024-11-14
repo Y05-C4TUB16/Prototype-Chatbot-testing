@@ -1,0 +1,6 @@
+[
+  {
+    "name": "program_option",
+    "pattern": "(\\bDiscovery\\ and\\ Play\\b|\\bSenior\\ Highschool\\b|\\bAdvanced\\ Sciences\\b|\\bIT\\ Programs\\b|\\bSports\\ Excellence\\b|\\bInclusive\\ Program\\b)"
+  }
+]

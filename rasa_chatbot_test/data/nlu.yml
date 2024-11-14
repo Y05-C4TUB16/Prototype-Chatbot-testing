@@ -3,6 +3,11 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
+    - kamusta
+    - kumusta
+    - musta
+    - sup
+    - wassup
     - hey
     - hello
     - hi
@@ -32,6 +37,8 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - paalam
+    - hanggang sa muli
 
 - intent: affirm
   examples: |
@@ -89,6 +96,11 @@ nlu:
     - What is HEDCEN short for?
     - What does the acronym HEDCEN stand for?
     - What is the full name of HEDCEN?
+    - Anong pangalan ng paaralan?
+    - Ano ang ibig sabihin ng HEDCEN?
+    - Ano ang kahulugan ng HEDCEN?
+    - Pwede mo bang sabihin kung ano ang ibig sabihin ng HEDCEN?
+    - Ano ang ibig sabihin ng akronimong HEDCEN?
 
 #- intent: complaint
 #  examples: |
@@ -124,6 +136,14 @@ nlu:
     - I would like to know more about the first option
     - May I inquire about Life Science and Research?
     - I would like to know more about Life Science and Research
+    - Pwede po bang magtanong tungkol sa unang pagpipilian?
+    - Gusto ko pong malaman pa ang tungkol sa unang pagpipilian?
+    - Pwede po bang magtanong tungkol sa Life Science and Research?
+    - Gusto ko pong malaman pa ang tungkol sa Life Science and Research?
+    - Pwede bang magtanong tungkol sa unang option?
+    - Gusto kong malaman pa tungkol sa unang option.
+    - Pwede bang magtanong tungkol sa Life Science and Research?
+    - Gusto kong malaman pa tungkol sa Life Science and Research.
 
 - intent: inquire_strand2_ttd
   examples: |
@@ -131,6 +151,12 @@ nlu:
     - I would like to know more about the second option
     - May I inquire about Teacher Training and Development?
     - I would like to know more about Teacher Training and Development
+    - Pwede bang magtanong tungkol sa pangalawang option?
+    - Gusto kong malaman pa tungkol sa pangalawang option.
+    - Pwede bang magtanong tungkol sa Teacher Training and Development
+    - Gusto kong malaman pa tungkol sa Teacher Training and Development
+    - Pwede po bang magtanong tungkol sa pangalawang pagpipilian?
+    - Gusto ko pong malaman pa ang tungkol sa pangalawang pagpipilian.
 
 - intent: inquire_strand3_sed
   examples: |
@@ -138,6 +164,11 @@ nlu:
     - I would like to know more about the third option
     - May I inquire about Small Enterprise Development?
     - I would like to know more about Small Enterprise Development
+    - Pwede po bang magtanong tungkol sa ikatlong pagpipilian?
+    - Gusto ko pong malaman pa ang tungkol sa ikatlong pagpipilian.
+    - Pwede po bang magtanong tungkol sa Small Enterprise Development?
+    - Pwede bang magtanong tungkol sa pangatlong option?
+    - Gusto kong malaman pa tungkol sa pangatlong option.
 
 - intent: inquire_strand4_mac
   examples: |
@@ -145,6 +176,12 @@ nlu:
     - I would like to know more about the fourth option
     - May I inquire about Media Arts Communication?
     - I would like to know more about Media Arts Communication
+    - Pwede po bang magtanong tungkol sa ikaapat na pagpipilian?
+    - Gusto ko pong malaman pa ang tungkol sa ikaapat na pagpipilian.
+    - Pwede po bang magtanong tungkol sa Media Arts Communication?
+    - Pwede bang magtanong tungkol sa pangapat na option?
+    - Gusto kong malaman pa tungkol sa pangapat na option.
+    - Pwede bang magtanong tungkol sa Media Arts Communication?
 
 - intent: inquire_strand5_fm
   examples: |
@@ -152,6 +189,12 @@ nlu:
     - I would like to know more about the fifth option
     - May I inquire about Football Management?
     - I would like to know more about Football Management
+    - Pwede po bang magtanong tungkol sa ikalimang pagpipilian?
+    - Gusto ko pong malaman pa ang tungkol sa ikalimang pagpipilian.
+    - Pwede po bang magtanong tungkol sa Football Management?
+    - Pwede bang magtanong tungkol sa panglima option?
+    - Gusto kong malaman pa tungkol sa panglima option.
+    - Pwede bang magtanong tungkol sa Football Management?
 
 - intent: inquire_strand6_cw
   examples: |
@@ -159,6 +202,14 @@ nlu:
     - I would like to know more about the sixth option
     - May I inquire about Contemporary Writing?
     - I would like to know more about Contemporary Writing
+    - Pwede po bang magtanong tungkol sa ikaanim na pagpipilian?
+    - Gusto ko pong malaman pa ang tungkol sa ikaanim na pagpipilian.
+    - Pwede po bang magtanong tungkol sa Contemporary Writing?
+    - Gusto ko pong malaman pa ang tungkol sa Contemporary Writing.
+    - Pwede bang magtanong tungkol sa ikaanim na option?
+    - Gusto kong malaman pa tungkol sa ikaanim na option.
+    - Pwede bang magtanong tungkol sa Contemporary Writing?
+    - Gusto kong malaman pa tungkol sa Contemporary Writing.
 
 # Profanity
 - intent: swear
