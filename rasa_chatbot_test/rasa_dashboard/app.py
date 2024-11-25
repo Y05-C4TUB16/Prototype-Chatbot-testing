@@ -119,7 +119,7 @@ elif page == "FAQ Management":
         for i, faq in enumerate(st.session_state.faqs):
             with st.expander(f"FAQ #{i + 1}: {faq['question']}"):
                 st.write("Answer:", faq['answer'])
-                if st.button(f"Delete FAQ #{i + 1}"):
+                if st.button(f"Delete FAQ #{i + 1}", key=f"delete_faq_{i}"):
                     st.session_state.faqs.pop(i)
                     st.experimental_rerun()
 
