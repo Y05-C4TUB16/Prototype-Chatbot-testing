@@ -274,97 +274,50 @@ nlu:
 - intent: Inquire_program_option1
   examples: |
     - 1
-    - What about option 1?
-    - number 1
     - What is Discovery and Play?
     - Can you tell me more about Discovery and Play?
-    - I'm interested in option 1 Discovery and Play.
-    - Could you provide details on option 1 Discovery and Play?
-    - Tell me about option 1 Discovery and Play.
+    - I'm interested in  Discovery and Play.
+    - Could you provide details on Discovery and Play?
+    - Tell me about Discovery and Play.
     - Please explain the first option Discovery and Play.
     - I want to learn about Discovery and Play.
     - Could you give me information about Discovery and Play?
     - Describe Discovery and Play.
-    - What can you tell me about option 1?
-    - Option 1, which is Discovery and Play, interests me.
-    - I want to know option 1
-    - I want to know number 1
 
 - intent: Inquire_program_option2
   examples: |
-    - 2
-    - number 2
-    - What about option 2?
     - What is Advanced Sciences?
     - Can you provide me details about Advanced Sciences?
-    - I'm interested in option 2 (Advanced Sciences).
-    - Could you provide details on option 2 (Advanced Sciences)?
-    - Tell me about option 2 (Advanced Sciences).
     - Please explain the Second option (Advanced Sciences).
     - I want to learn about Advanced Sciences.
     - Could you give me information about Advanced Sciences?
     - Describe Advanced Sciences.
-    - What can you tell me about option 2?
-    - Option 2, which is Advanced Sciences, interests me.
-    - I want to know option 2
-    - I want to know number 2
 
 - intent: Inquire_program_option3
   examples: |
-    - 3
-    - number 3
-    - What about option 3?
     - What are the IT Programs offered?
     - Can you tell me about the IT Programs?
-    - I'm interested in option 3 (IT Programs).
-    - Could you provide details on option 3 (IT Programs)?
-    - Tell me about option 3 (IT Programs).
-    - Please explain the Third option (IT Programs).
     - I want to learn about IT Programs.
     - Could you give me information about IT Programs?
     - Describe IT Programs.
-    - What can you tell me about option 3?
-    - Option 3, which is IT Programs, interests me.
-    - I want to know option 3
-    - I want to know number 3
 
 - intent: Inquire_program_option4
   examples: |
-    - 4
-    - number 4
     - What is Sports Excellence?
-    - What about option 4?
     - Can you provide me details about Sports Excellence?
-    - I'm interested in option 4 (Sports Excellence).
-    - Could you provide details on option 4 (Sports Excellence)?
-    - Tell me about option 4 (Sports Excellence).
     - Please explain the fourth option (Sports Excellence).
     - I want to learn about Sports Excellence.
     - Could you give me information about Sports Excellence?
     - Describe Sports Excellence.
-    - What can you tell me about option 4?
-    - Option 4, which is Sports Excellence, interests me.
-    - I want to know option 4
-    - I want to know number 4
 
 - intent: Inquire_program_option5
   examples: |
-    - 5
-    - number 5
     - What is the Inclusive Program?
-    - What about option 5?
     - Can you provide me details about the Inclusive Program?
-    - I'm interested in option 5 (Inclusive Program).
-    - Could you provide details on option 5 (Inclusive Program)?
-    - Tell me about option 5 (Inclusive Program).
     - Please explain the fifth option (Inclusive Program).
     - I want to learn about the Inclusive Program.
     - Could you give me information about the Inclusive Program?
     - Describe the Inclusive Program.
-    - What can you tell me about option 5?
-    - Option 5, which is the Inclusive Program, interests me.
-    - I want to know option 5
-    - I want to know number 5
 
 # contact information
 - intent: ask_location

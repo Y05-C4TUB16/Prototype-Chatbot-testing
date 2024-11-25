@@ -237,8 +237,8 @@ responses:
   # SHS Strands
   utter_available_strand:
     - text: "Our SHS Program has six strands that students can choose from. The modules offered under these strands are open not only to HEDCen students but also
-     to adults and other individuals as well. These may be taken as independent classes and will merit course certificate.\n1. Life Science and Research\n2. Teacher Training and Development
-     \n3. Small Enterprise Development\n4. Media Arts Communication\n5. Football Management\n6. Contemporary Writing"
+     to adults and other individuals as well. These may be taken as independent classes and will merit course certificate.\n◉ Life Science and Research\n◉ Teacher Training and Development
+     \n◉ Small Enterprise Development\n◉ Media Arts Communication\n◉ Football Management\n◉ Contemporary Writing"
 
   utter_information_strand1:
     - text: "Sure thing! Life Science and Research aims to empower students to produce knowledge through immersive research in their chosen field: Limnology (lakes and rivers),
@@ -272,9 +272,13 @@ responses:
 #School Programs
   utter_list_program:
     - text: "The school offers a diverse range of programs to cater to different interests and needs:
-    \n1. Discovery and Play\n2. Advanced Sciences\n3. IT Programs\n4. Sports Excellence
-    \n5. Inclusive Program\n"
+    \n◉ Discovery and Play\n◉ Advanced Sciences\n◉ IT Programs\n◉ Sports Excellence
+    \n◉ Inclusive Program\n"
 
+
+# "The school offers a diverse range of programs to cater to different interests and needs:
+#    \n1. Discovery and Play\n2. Advanced Sciences\n3. IT Programs\n4. Sports Excellence
+#    \n5. Inclusive Program\n"
 
 # Users Ask programs:
 
