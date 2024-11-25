@@ -123,6 +123,14 @@ elif page == "FAQ Management":
                     st.session_state.faqs.pop(i)
                     st.experimental_rerun()
 
+        # Export FAQs as CSV
+        if st.button("Export FAQs"):
+            df = pd.DataFrame(st.session_state.faqs)
+            df.to_csv("faqs.csv", index=False)
+            st.success("FAQs exported successfully!")
+    else:
+        st.info("No FAQs available")
+
 elif page == "Analytics":
     st.title("Chatbot Analytics")
 
